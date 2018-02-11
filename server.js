@@ -5,11 +5,6 @@ const app = express();
 const key = fs.readFileSync('./server.key');
 const cert = fs.readFileSync('./server.crt' );
 
-const options = {
-    key: key,
-    cert: cert
-};
-
 app.use(express.static(__dirname));
 
 app.get('/Page', (req, res) => {
@@ -40,5 +35,5 @@ app.get('/gluedWidget*', (req, res) => {
     res.sendFile(__dirname + "/TPA/Fixed.html");
 });
 
-https.createServer(options, app).listen(5000, () => console.log("Server is running on port 5000"));
+https.createServer({key: key, cert: cert}, app).listen(5000, () => console.log("Server is running on port 5000"));
 
