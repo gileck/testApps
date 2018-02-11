@@ -1,0 +1,41 @@
+<!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://static.parastorage.com/services/js-sdk/31bf95fe470eda788fdc9fee2e924697c01f8cbe/js/wix-private.js"></script>
+
+  </head>
+  <body>
+    <h1 id="header">Menu</h1>
+    <p>Refresh Iframe</p>
+    <button onclick="navigateToSection('red', true)">Red</button>
+    <button onclick="navigateToSection('blue', true)">Blue</button>
+    <button onclick="navigateToSection('green', true)">Green</button>
+
+    </br>
+    </br>
+    </br>
+    <p>NOT Refresh Iframe</p>
+    <button onclick="navigateToSection('red', false)">Red</button>
+    <button onclick="navigateToSection('blue', false)">Blue</button>
+    <button onclick="navigateToSection('green', false)">Green</button>
+  </body>
+</html>
+
+<script>
+
+  function navigateToSection(state, shouldRefreshIframe) {
+      Wix.Utils.navigateToSection({ sectionId : 'section', "shouldRefreshIframe": shouldRefreshIframe }, state)
+
+
+      //ReactSource=http%3A%2F%2Flocalhost&debug=all&experiments=se_platform1%2CdeveloperModeToggle&js-wixcode-sdk-override=af21123719c1d792f0894789862e279b1b186ac5
+  }
+
+
+</script>
+
+
+<!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->

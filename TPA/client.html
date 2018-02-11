@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="https://static.parastorage.com/services/js-sdk/31bf95fe470eda788fdc9fee2e924697c01f8cbe/js/wix-private.js"></script>
+
+    <title>Client</title>
+  </head>
+  <body>
+    <h1>Client</h1>
+    <button onclick="openPage()">Test Section</button>
+    <button onclick="openWidget()">Test Widget</button>
+    <h3 id="result"></h3>
+    <h3 id="value"></h3>
+    <h3 id="product"></h3>
+
+    <h3 id="addsum"></h3>
+
+  </body>
+</html>
+
+<script>
+    const APP = "1509fd92-14c3-0bd1-1888-7e73e61851f3";
+
+    function openPage() {
+        Wix.requireSingletonAPI(APP, Wix.Apps.Type.PAGE, apiObject => {
+            apiObject.open("https://example2.com/");
+        });
+    }
+
+    function openWidget() {
+        Wix.requireSingletonAPI(APP, Wix.Apps.Type.WIDGET, apiObject => {
+            apiObject.open("https://example1.com/");
+        });
+    }
+
+    openPage();
+    setTimeout(() => openWidget(),1000);
+
+</script>
+
+

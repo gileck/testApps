@@ -1,0 +1,39 @@
+<!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://static.parastorage.com/services/js-sdk/31bf95fe470eda788fdc9fee2e924697c01f8cbe/js/wix-private.js"></script>
+
+  </head>
+  <body>
+    <h1 id="header">API Page Provider</h1>
+    <h2 id="pathname"></h2>
+  </body>
+</html>
+
+<script>
+  console.log("RELOADING IFRAME");
+  document.getElementById("pathname").innerText = window.location.pathname;
+
+  function registerAPI() {
+        // console.log("Registering new API: " + window.location.pathname );
+        Wix.registerApi({
+            open: function(url) {
+                Wix.openPopup(url, 300, 300);
+            }
+        });
+    }
+
+    setTimeout(function () {
+        Wix.fireEvent('itemClicked', {a: 1, b: 2});
+    },1000);
+
+    registerAPI();
+
+</script>
+
+<!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->
+

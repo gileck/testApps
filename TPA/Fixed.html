@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://static.parastorage.com/services/js-sdk/31bf95fe470eda788fdc9fee2e924697c01f8cbe/js/wix-private.js"></script>
+
+  </head>
+  <body>
+    <h1 id="header">API FIXED Provider</h1>
+  </body>
+</html>
+
+<script>
+    function registerAPI() {
+        Wix.registerApi({
+            open: function(url) {
+                Wix.openPopup(url, 300, 300);
+            }
+        });
+    }
+
+    setTimeout(function () {
+        Wix.fireEvent('onClose', {a: 1, b: 2 });
+    },5000);
+
+    registerAPI();
+</script>
+
+<!--https://gileck.github.io/simpleApp/index2.html-->
