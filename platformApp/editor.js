@@ -8,6 +8,12 @@ module.exports = function () {
         if (options.firstInstall) {
             await app.install();
         }
+        // setTimeout(() => , 3000);
+        const playButton = await app.getComponentByRole("Play");
+        console.log(playButton);
+        await app.updateConnection(playButton.componentRef, "Play", {a: 1});
+        const playButtonAfterUpdate = await app.getComponentByRole("Play");
+        console.log(playButtonAfterUpdate);
     }
 
     async function onEvent(event) {
@@ -51,6 +57,7 @@ module.exports = function () {
             this.appDefinitionId = appDefinitionId;
             this.pageRef = pageRef;
             this.controllerRef = null;
+            this.components = {};
             this.eventHandlers = {
                 "componentDeleted": this.onComponentDeleted,
                 "controllerAdded": this.onControllerAdded,
@@ -84,6 +91,7 @@ module.exports = function () {
         async addConnectedComponent(componentType, role, data = {}) {
             const compRef = await this.addComponent(componentType, data);
             await this.connect(this.controllerRef, compRef, role);
+            this.components.push(compRef);
             return compRef;
         }
 
@@ -146,17 +154,56 @@ module.exports = function () {
                 title: "MY MODAL",
                 componentRef,
                 initialData: {a: 1},
-                width: "90%",
+                width: "99%",
                 height: "90%",
                 url: "modal.html"
             })
         }
+
+        async getController() {
+            const componentsRefs = await this.editorSDK.components.getAllComponents();
+            const componentsData = await Promise.all(componentsRefs.map(compRef => this.editorSDK.components.data.get(null, {componentRef: compRef})));
+            const components = componentsData.map((comp, index) => Object.assign({}, comp, {componentRef: componentsRefs[index]}));
+            const controller = components.find(c => c.type === "AppController");
+            return controller.componentRef;
+        }
+        
+        async getComponents() {
+            const controllerRef = await this.getController();
+            const connectedComponents = await this.editorSDK.controllers.getControllerConnections(null, {controllerRef});
+            const connectedComponentsRefs = connectedComponents.map(c => c.componentRef);
+            const componentsData = await Promise.all(connectedComponentsRefs.map(compRef => this.editorSDK.components.data.get(null, {componentRef: compRef})));
+            const components = connectedComponents.map((comp, index) => Object.assign({}, comp, componentsData[index]));
+            return components;
+        }
+
+        async getComponentByRole(role) {
+            const components = await this.getComponents();
+            return components.find(comp => comp.connection.role === role);
+        }
+
+        async updateConnection(componentRef, role, connectionConfig) {
+            console.log(await this.getController());
+            this.editorSDK.controllers.connect('token', {
+                controllerRef: await this.getController(),
+                connectToRef: componentRef,
+                role: role,
+                connectionConfig,
+                isPrimary: true
+            });
+        }
+
+        async printComponents() {
+            this.editorSDK.components.get()
+        }
+
     }
 
     return {
         editorReady,
         onEvent,
-        getAppManifest
+        getAppManifest,
     }
 }();
+
 

@@ -13,6 +13,7 @@ function pageReady($w) {
 }
 
 function createControllers(controllerConfigs) {
+
     return controllerConfigs.map(controller => ({
         pageReady
     }));
