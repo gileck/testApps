@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript"
+            src="https://static.parastorage.com/services/js-sdk/31bf95fe470eda788fdc9fee2e924697c01f8cbe/js/wix-private.js"></script>
+
+    <title>ADD TO CART</title>
+  </head>
+  <body>
+    <img width=50 src="https://freeiconshop.com/wp-content/uploads/edd/shopping-bag-outline.png" alt="">
+    <div class="num" id="num"></div>
+  </body>
+</html>
+
+<script>
+    let numOfProduct = 0;
+    document.getElementById("num").innerText = numOfProduct;
+
+    subscribeToCartChanged();
+    getItemsInCartCount();
+    Wix.addEventListener("PAGE_NAVIGATION", function () {
+        subscribeToCartChanged();
+    });
+
+    function getItemsInCartCount() {
+        Wix.getPublicAPI({appDefinitionId: '1515aba9-2828-7528-a270-ce1dda0e9826'}, function (api) {
+            api.getItemsInCartCount().then(count => {
+                document.getElementById("num").innerText = count;
+                numOfProduct = count;
+            });
+        }, function (error) {
+            console.log(error);
+        });
+    }
+
+    function subscribeToCartChanged() {
+        Wix.getPublicAPI({appDefinitionId: '1515aba9-2828-7528-a270-ce1dda0e9826'}, function (api) {
+            console.log(api);
+            api.onItemAddedToCart(function (id, value) {
+                console.log();
+                numOfProduct = numOfProduct + value;
+                document.getElementById("num").innerText = numOfProduct;
+            })
+        }, function (error) {
+            console.log(error);
+        });
+    }
+
+</script>
+
+<style>
+  .num {
+    position: absolute;
+    right: 21px;
+    top: 31px;
+    font-size: 20px;
+  }
+</style>
+
+
+<!--"viewer_platform_public_api_14ffd3ac-6fde-4a95-1f3a-e7a0a366fa24_c1dmp"-->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"
+            src="https://static.parastorage.com/services/js-sdk/31bf95fe470eda788fdc9fee2e924697c01f8cbe/js/wix-private.js"></script>
+    
+    
+
+      </head>
+  <body>
+    <h1>Shirt</h1>
+    <h6>150$</h6>
+    <img width="100" src="http://img.michaels.com/L6/3/IOGLO/873402639/212485006/10186027_r.jpg?fit=inside|1024:1024" alt="">
+    <button style="float: right;" onclick="addToCart()">Add To Cart</button>
+  </body>
+</html>
+
+<script>
+  function addToCart() {
+      Wix.getPublicAPI({appDefinitionId: '1515aba9-2828-7528-a270-ce1dda0e9826'}, function (api) {
+
+          api.addToCart("3124124")
+
+      }, function (error) {
+          console.log(error);
+      });
+  }
+</script>

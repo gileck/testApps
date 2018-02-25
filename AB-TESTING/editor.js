@@ -10,31 +10,6 @@ module.exports = function () {
         if (options.firstInstall) {
             await app.install();
         }
-
-        // let playButton = await app.getComponentByRole("Play");
-        // console.log(playButton);
-        // await app.updateConnection(playButton.componentRef, "Play", {a: 1});
-        // playButton = await app.getComponentByRole("Play");
-        // console.log(playButton);
-        // await app.updateConnection(playButton.componentRef, "Play", {b: 2});
-        // playButton = await app.getComponentByRole("Play");
-        // console.log(playButton);
-        // await app.addConnectedComponent('mobile.core.components.Container', 'Box', {
-        //     applicationId: app.appDefinitionId,
-        //     type: "AppController",
-        //     controllerType: 'BoxControllerType',
-        //     name: 'BoxContainerController'
-        // });
-        // await app.addConnectedComponent('wysiwyg.viewer.components.VectorImage', 'shape', {
-        //     svgId: "svgshape.v2.Svg_08e9266742a9484b90115d29bbfa9360",
-        //     type: "VectorImage"
-        // });
-        //
-        // await app.addConnectedComponent('wysiwyg.viewer.components.VectorImage', 'fox', {
-        //     svgId: "4431a8dffbcc4169b10bf364fee0b7f2.svg",
-        //     title: "Fox",
-        //     type: "VectorImage"
-        // });
     }
 
     async function onEvent(event) {
@@ -47,46 +22,10 @@ module.exports = function () {
     function getAppManifest() {
         return {
             controllersStageData: {
-                fooBar: {
+                controller1: {
                     default: {
                         visibility: 'DEV',
-                        connections: {
-                            "strip": {
-                                "behavior": {
-                                    "resizable": true,
-                                    "toggleShowOnAllPagesEnabled": false,
-                                    "pinnable": false
-                                }
-                            },
-                            "fox": {
-                                "behavior": {
-                                    "resizable": 'false',
-                                    "toggleShowOnAllPagesEnabled": false,
-                                    "pinnable": false
-                                }
-                            },
-                            "shape": {
-                                "behavior": {
-                                    "resizable": false,
-                                    "toggleShowOnAllPagesEnabled": false,
-                                    "pinnable": false
-                                }
-                            },
-                            "Play": {
-                                "behavior": {
-                                    "resizable": false,
-                                    "toggleShowOnAllPagesEnabled": true,
-                                    "pinnable": true
-                                }
-                            },
-                            "Pause": {
-                                "behavior": {
-                                    "resizable": 'proportional',
-                                    "toggleShowOnAllPagesEnabled": false,
-                                    "pinnable": false
-                                }
-                            }
-                        }
+                        connections: {}
                     }
                 }
             }
@@ -137,12 +76,8 @@ module.exports = function () {
         }
 
         async install() {
-            // await this.addController();
-            // await this.addConnectedComponent('wysiwyg.viewer.components.Video', 'Player', {videoId: "WWpQK3nQclU"});
-            // const playButtonRef = await this.addConnectedComponent('wysiwyg.viewer.components.SiteButton', 'Play');
-            // await this.editorSDK.components.data.update(null, {componentRef: playButtonRef, data: {label: 'Play'}});
-            // const pauseButtonRef = await this.addConnectedComponent('wysiwyg.viewer.components.SiteButton', 'Pause');
-            // await this.editorSDK.components.data.update(null, {componentRef: pauseButtonRef, data: {label: 'Pause'}});
+            await this.addController();
+            const compRef = await this.addConnectedComponent('wysiwyg.viewer.components.SiteButton', 'Button1');
         }
 
         async addController() {
@@ -151,8 +86,8 @@ module.exports = function () {
                     componentType: 'platform.components.AppController',
                     data: {
                         applicationId: this.appDefinitionId,
-                        controllerType: 'fooBar',
-                        name: 'Item'
+                        controllerType: 'controller1',
+                        name: 'controller1'
                     }
                 },
                 pageRef: this.pageRef
@@ -173,9 +108,9 @@ module.exports = function () {
         }
 
         async onComponentDeleted() {
-            await this.removeAllConnectedComponents();
-            await this.removeController();
-            await this.removeTPAWidget();
+            // await this.removeAllConnectedComponents();
+            // await this.removeController();
+            // await this.removeTPAWidget();
         }
 
         async onControllerAdded() {
@@ -196,8 +131,8 @@ module.exports = function () {
                 title: "MY MODAL",
                 componentRef,
                 initialData: {a: 1},
-                width: "90%",
-                height: "90%",
+                width: "20%",
+                height: "70%",
                 url: "modal.html"
             })
         }
