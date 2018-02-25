@@ -14,17 +14,28 @@
     </div>
 
     <div class="main">
-
+      <div>
+        <div>
+          Label:
+          <input type="text">
+        </div>
+        <div>
+          Color:
+          <input type="color">
+        </div>
+      </div>
     </div>
 
   </body>
 </html>
 
 <script>
+    let currentVarient;
+
     console.log(window.editorSDK);
 
-    function show(num) {
-        console.log(num);
+    function show(varient) {
+        currentVarient = varient;
     }
 </script>
 
