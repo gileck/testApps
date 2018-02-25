@@ -9,7 +9,9 @@ function initAppForPage() {
 }
 
 function pageReady($w) {
-    const index = getVarient();
+    const varientPCT = 50;
+    //replace this with value from the connection config
+    const index = getVarient(varientPCT);
     console.log(index);
     sendImpression();
     $w("@mainContainer").changeSlide(index);
@@ -34,8 +36,15 @@ function sendEvent(index) {
     console.log(index);
 }
 
-function getVarient() {
-    return Math.floor(Math.random() * 2);
+/**
+ * simple algorithm for choosing a random weighed number
+ */
+function getVarient(varientAPercant) {
+    const array = [];
+    for (let i = 0; i < varientAPercant; i++) array.push(0)
+    for (let i = varientAPercant; i < 100; i++) array.push(1)
+    const rundomIndexOfArray = Math.floor(Math.random() * 100);
+    return array[rundomIndexOfArray];
 }
 
 module.exports = {
