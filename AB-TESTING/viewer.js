@@ -9,14 +9,16 @@ function initAppForPage() {
 }
 
 function pageReady($w) {
-    const index = Math.floor(Math.random() * 2);
+    const index = getVarient();
     console.log(index);
+    sendImpression();
     $w("@mainContainer").changeSlide(index);
     $w("@ButtonA").onClick(() => sendEvent(0));
     $w("@ButtonB").onClick(() => sendEvent(1));
 }
 
 function createControllers(controllerConfigs) {
+    console.log(controllerConfigs);
     return controllerConfigs.map(controllerConfig => {
         return {
             pageReady: pageReady
@@ -24,12 +26,19 @@ function createControllers(controllerConfigs) {
     });
 }
 
+function sendImpression(index) {
+
+}
+
 function sendEvent(index) {
     console.log(index);
 }
 
+function getVarient() {
+    return Math.floor(Math.random() * 2);
+}
 
 module.exports = {
     initAppForPage,
     createControllers,
-}
+};

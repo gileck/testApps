@@ -4,25 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <script type="text/javascript"
-            src="https://static.parastorage.com/services/js-platform-editor-sdk/1.109.0/lib/editorSDK.min.js"></script>
+    <script type="text/javascript" src="https://static.parastorage.com/services/js-platform-editor-sdk/1.109.0/lib/editorSDK.min.js"></script>
   </head>
   <body>
-    <div class="header">
-      <div class="header-inner" onclick="show(1)">A</div>
-      <div class="header-inner" onclick="show(2)">B</div>
-    </div>
+    <!--<div class="header">-->
+      <!--<div class="header-inner" onclick="show(1)">A</div>-->
+      <!--<div class="header-inner" onclick="show(2)">B</div>-->
+    <!--</div>-->
 
     <div class="main">
       <div>
-        <div>
-          Label:
-          <input type="text">
-        </div>
-        <div>
-          Color:
-          <input type="color">
-        </div>
+        <span class="letter">A</span>
+        <input type="range" class="range">
+        <span class="letter">B</span>
       </div>
     </div>
 
@@ -31,15 +25,17 @@
 
 <script>
     let currentVarient;
-
     console.log(window.editorSDK);
-
     function show(varient) {
         currentVarient = varient;
     }
 </script>
 
 <style>
+  .range {
+    width: 70%
+
+  }
   .header {
     display: flex;
     width: 100%;
@@ -55,7 +51,12 @@
     border-right: 1px solid gray;
   }
 
+  .letter {
+    font-size: 30px;
+  }
+
   body {
-    margin: 0
+    margin: 0;
+    text-align: center;
   }
 </style>
