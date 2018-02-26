@@ -616,6 +616,7 @@ module.exports = function () {
                     await this.connect(controllerRef, children[j], typeSplit[typeSplit.length-1]+i);
                 }
             }
+            await this.editorSDK.tpa.add.application('agaregg', {appDefinitionId: '1516e29e-c67c-5630-a270-ce1dda0e9826'})
         }
 
         async addController() {

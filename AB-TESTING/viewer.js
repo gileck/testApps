@@ -2,6 +2,9 @@ const serverURL = "https://192.168.230.26:3000";
 const VARIANT_A = 0;
 const VARIANT_B = 1;
 
+let resolver;
+const urlPromise = new Promise(resolve => {resolver = resolve});
+
 function initAppForPage() {
     console.log("initAppForPage");
 }
@@ -9,6 +12,7 @@ function initAppForPage() {
 function pageReady($w, wix, variant, measure) {
     const websiteURL = wix.location.baseUrl;
     console.log(variant);
+    resolver(websiteURL);
     sendImpression(variant, websiteURL);
     $w("@mainContainer").changeSlide(variant);
     if (measure === 'clickOnButton'){
@@ -58,4 +62,11 @@ function getVariant(percentage) {
 module.exports = {
     initAppForPage,
     createControllers,
+    exports: {
+      async getData() {
+        const url = await urlPromise;
+        const res = await fetch(`${serverURL}/data?url=${url}`);
+        return await res.json();
+      }
+    }
 };
