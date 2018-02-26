@@ -626,7 +626,8 @@ module.exports = function () {
                     data: {
                         applicationId: this.appDefinitionId,
                         controllerType: 'controller1',
-                        name: 'controller1'
+                        name: 'controller1',
+                        settings: JSON.stringify({percentage: 50})
                     }
                 },
                 pageRef: this.pageRef
@@ -666,10 +667,11 @@ module.exports = function () {
         }
 
         async onControllerSettingsButtonClicked({componentRef}) {
-            this.editorSDK.editor.openModalPanel(null, {
+            const {settings} = await this.editorSDK.components.data.get(componentRef);
+            this.editorSDK.editor.openComponentPanel(null, {
                 title: "MY MODAL",
                 componentRef,
-                initialData: {a: 1, componentRef},
+                initialData: {a: 1, settings, componentRef},
                 width: "20%",
                 height: "70%",
                 url: "modal.html"

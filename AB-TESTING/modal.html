@@ -7,15 +7,10 @@
     <script type="text/javascript" src="https://static.parastorage.com/services/js-platform-editor-sdk/1.109.0/lib/editorSDK.min.js"></script>
   </head>
   <body>
-    <!--<div class="header">-->
-      <!--<div class="header-inner" onclick="show(1)">A</div>-->
-      <!--<div class="header-inner" onclick="show(2)">B</div>-->
-    <!--</div>-->
-
     <div class="main">
       <div>
         <span class="letter">A</span>
-        <input type="range" class="range" min="0" max="100", step="10" onchange="onChange(this.value)">
+        <input id="slider" type="range" class="range" min="0" max="100" step="10" onchange="onChange(this.value)">
         <span class="letter">B</span>
       </div>
     </div>
@@ -24,27 +19,23 @@
 </html>
 
 <script>
-    let currentVarient;
-    let componentRef;
-    editorSDK.panel.onEvent(async event => {
+    let controllerRef;
+    editorSDK.panel.onEvent(event => {
         switch (event.eventType) {
             case 'startConfiguration':
-                componentRef = event.eventPayload.initialData.componentRef
+            controllerRef = event.eventPayload.initialData.settings.controllerRef
+            document.querySelector('#slider').value = event.eventPayload.initialData.settings.percentage
         }
     });
-    async  function onChange(val) {
-        const connections = await  editorSDK.controllers.listConnections('token', {componentRef});
-        const connection = connections[0];
-        editorSDK.controllers.connect('token', {
-            controllerRef: connection.controllerRef,
-            connectToRef: componentRef,
-            role: connection.role,
-            isPrimary: true,
-            connectionConfig: {precent: val}
-        });
-    }
-    function show(varient) {
-        currentVarient = varient;
+    function onChange(val) {
+      if (controllerRef) {
+        editorSDK.document.components.data.update('someToken', {
+          componentRef: controllerRef,
+          data: {
+            settings: JSON.stringify({percentage: val})
+          }
+        })
+      }
     }
 </script>
 
