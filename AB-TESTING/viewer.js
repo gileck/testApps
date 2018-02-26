@@ -11,8 +11,8 @@ function pageReady($w, wix, variant) {
     console.log(variant);
     sendImpression(variant, websiteURL);
     $w("@mainContainer").changeSlide(variant);
-    $w("@SiteButton0").onClick(() => sendEvent(VARIANT_A, websiteURL));
-    $w("@SiteButton1").onClick(() => sendEvent(VARIANT_B, websiteURL));
+    $w("@SiteButton0").onClick(() => sendClickEvent(VARIANT_A, websiteURL));
+    $w("@SiteButton1").onClick(() => sendClickEvent(VARIANT_B, websiteURL));
 }
 
 function createControllers(controllerConfigs) {
@@ -35,8 +35,12 @@ async function sendImpression(variant, url) {
     await fetch(serverURL + "/sendImpression?url=" + url + "&variant=" + variant);
 }
 
-async function sendEvent(variant, url) {
-    await fetch(serverURL + "/sendEvent?url=" + url + "&variant=" + variant);
+async function sendClickEvent(variant, url) {
+    await fetch(serverURL + "/sendClickEvent?url=" + url + "&variant=" + variant);
+}
+
+async function sendHoverEvent(variant, url) {
+    await fetch(serverURL + "/sendHoverEvent?url=" + url + "&variant=" + variant);
 }
 
 /**

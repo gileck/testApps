@@ -24,11 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/editor.js" afterPath="$PROJECT_DIR$/AB-TESTING/editor.js" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/modal.html" afterPath="$PROJECT_DIR$/AB-TESTING/modal.html" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/server/db.js" afterPath="$PROJECT_DIR$/AB-TESTING/server/db.js" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" afterPath="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/viewer.js" afterPath="$PROJECT_DIR$/AB-TESTING/viewer.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,23 +42,23 @@
       <file leaf-file-name="editor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="715" column="52" lean-forward="true" selection-start-line="715" selection-start-column="52" selection-end-line="715" selection-end-column="52" />
+            <state relative-caret-position="417">
+              <caret line="716" column="52" lean-forward="true" selection-start-line="716" selection-start-column="52" selection-end-line="716" selection-end-column="52" />
               <folding>
                 <element signature="e#23#19433#0" expanded="false" />
                 <element signature="e#19551#19906#0" expanded="false" />
                 <element signature="e#19936#20109#0" expanded="false" />
-                <element signature="e#20141#22811#0" expanded="false" />
+                <element signature="e#20141#22878#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="465">
+              <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -82,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/AB-TESTING/modal.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+              <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
                 <element signature="n#script#0;n#!!top" expanded="false" />
               </folding>
@@ -90,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="16" />
+            <state relative-caret-position="375">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -103,9 +99,11 @@
       <file leaf-file-name="viewer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="579">
+              <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <folding>
+                <marker date="1519657217670" expanded="true" signature="1324:1369" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="106" lean-forward="true" selection-start-line="0" selection-start-column="106" selection-end-line="0" selection-end-column="106" />
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -190,11 +188,11 @@
         <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/results.html" />
-        <option value="$PROJECT_DIR$/AB-TESTING/viewer.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/editor.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/modal.html" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/db.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/viewer.js" />
       </list>
     </option>
   </component>
@@ -352,16 +350,15 @@
       <workItem from="1519038390349" duration="19142000" />
       <workItem from="1519211649966" duration="27990000" />
       <workItem from="1519545765491" duration="26115000" />
-      <workItem from="1519633201772" duration="17256000" />
+      <workItem from="1519633201772" duration="17352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171546000" />
+    <option name="totallyTimeSpent" value="171643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1195366" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -371,7 +368,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32209405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32209405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -570,7 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -649,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,7 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,31 +965,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="106" lean-forward="true" selection-start-line="0" selection-start-column="106" selection-end-line="0" selection-end-column="106" />
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="715" column="52" lean-forward="true" selection-start-line="715" selection-start-column="52" selection-end-line="715" selection-end-column="52" />
+        <state relative-caret-position="417">
+          <caret line="716" column="52" lean-forward="true" selection-start-line="716" selection-start-column="52" selection-end-line="716" selection-end-column="52" />
           <folding>
             <element signature="e#23#19433#0" expanded="false" />
             <element signature="e#19551#19906#0" expanded="false" />
             <element signature="e#19936#20109#0" expanded="false" />
-            <element signature="e#20141#22811#0" expanded="false" />
+            <element signature="e#20141#22878#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1007,18 +989,10 @@
     <entry file="file://$PROJECT_DIR$/AB-TESTING/modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding>
             <element signature="n#script#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,11 +1004,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="465">
+          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding>
+            <marker date="1519657217670" expanded="true" signature="1324:1369" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
