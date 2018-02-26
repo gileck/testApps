@@ -11,7 +11,7 @@ function initAppForPage() {
     console.log("initAppForPage");
 }
 
-function pageReady($w, Wix) {
+function pageReady($w, Wix, controllerConfig) {
     const websiteURL = Wix.location.baseUrl;
     const variantPCT = 50;
     //replace this with value from the connection config
@@ -19,15 +19,15 @@ function pageReady($w, Wix) {
     console.log(chosenVariant);
     sendImpression(chosenVariant, websiteURL);
     $w("@mainContainer").changeSlide(chosenVariant);
-    $w("@ButtonA").onClick(() => sendEvent(VARIANT_A, websiteURL));
-    $w("@ButtonB").onClick(() => sendEvent(VARIANT_B, websiteURL));
+    $w("@SiteButton0").onClick(() => sendEvent(VARIANT_A, websiteURL));
+    $w("@SiteButton1").onClick(() => sendEvent(VARIANT_B, websiteURL));
 }
 
 function createControllers(controllerConfigs) {
     console.log(controllerConfigs);
     return controllerConfigs.map(controllerConfig => {
         return {
-            pageReady: pageReady
+            pageReady: ($w, Wix) => pageReady($w, Wix, controllerConfig)
         }
     });
 }
