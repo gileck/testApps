@@ -6,11 +6,8 @@ function initAppForPage() {
     console.log("initAppForPage");
 }
 
-function pageReady($w, wix, {config}) {
+function pageReady($w, wix, variant) {
     const websiteURL = wix.location.baseUrl;
-    const {percentage} = config;
-    //replace this with value from the connection config
-    const variant = getVariant(percentage);
     console.log(variant);
     sendImpression(variant, websiteURL);
     $w("@mainContainer").changeSlide(variant);
@@ -21,8 +18,15 @@ function pageReady($w, wix, {config}) {
 function createControllers(controllerConfigs) {
     console.log(controllerConfigs);
     return controllerConfigs.map(controllerConfig => {
+      const {percentage} = controllerConfig.config;
+      const variant = getVariant(percentage);
         return {
-            pageReady: ($w, Wix) => pageReady($w, Wix, controllerConfig)
+            pageReady: ($w, Wix) => pageReady($w, Wix, variant),
+            exports: {
+                getVariant() {
+                    return variant;
+                }
+            }
         }
     });
 }

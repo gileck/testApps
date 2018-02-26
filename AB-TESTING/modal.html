@@ -12,22 +12,54 @@
         Trigger Test
       </header>
       <div>
+
         <span class="letter">A</span>
         <input id="slider" type="range" class="range" min="0" max="100" step="10" onchange="onChange(this.value)">
         <span class="letter">B</span>
       </div>
+
+      <p>How you want to measure success:</p>
+      <form id="successAction">
+        <input type="radio" id="clickOnButton"
+               name="contact" value="clickOnButton">
+        <label for="clickOnButton">click On Button</label>
+
+        <input type="radio" id="hoverOnButton"
+               name="contact" value="hoverOnButton">
+        <label for="hoverOnButton">hover On Button</label>
+      </form>
+
+
+
+      <div>
     </div>
 
   </body>
 </html>
 
 <script>
-    let controllerRef;
+    let controllerRef, controllerSettings;
+
+    document.getElementById('successAction').addEventListener('change', function(event){
+        const selection = event.target.value;
+
+        if (controllerRef) {
+            editorSDK.document.components.data.update('someToken', {
+                componentRef: controllerRef,
+                data: {
+                    settings: JSON.stringify(Object.assign({},controllerSettings,{measure: selection}))
+                }
+            })
+        }
+    })
+
     editorSDK.panel.onEvent(event => {
         switch (event.eventType) {
             case 'startConfiguration':
             controllerRef = event.eventPayload.initialData.controllerRef
-            document.querySelector('#slider').value = JSON.parse(event.eventPayload.initialData.settings).percentage
+            controllerSettings = JSON.parse(event.eventPayload.initialData.settings);
+            document.querySelector('#slider').value = controllerSettings.percentage;
+            document.querySelector('#' + controllerSettings.measure).checked = true;
         }
     });
     function onChange(val) {
@@ -35,7 +67,7 @@
         editorSDK.document.components.data.update('someToken', {
           componentRef: controllerRef,
           data: {
-            settings: JSON.stringify({percentage: Number(val)})
+            settings: JSON.stringify(Object.assign({},controllerSettings,{percentage: Number(val)}))
           }
         })
       }
