@@ -22,7 +22,15 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="" />
+    <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/credentials/server.crt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/credentials/server.key" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/db.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/results.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/AB-TESTING/reporterServer.js" afterPath="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -36,20 +44,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AB-TESTING/reporterServer.js">
+        <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="479">
+              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AB-TESTING/server/results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AB-TESTING/server/db.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="501">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbFile.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -60,8 +98,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -112,7 +150,13 @@
         <option value="$PROJECT_DIR$/StoresApp/addToCart.html" />
         <option value="$PROJECT_DIR$/StoresApp/viewerScript.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/reporterServer.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/db.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
         <option value="$PROJECT_DIR$/AB-TESTING/viewer.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/db.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/results.html" />
       </list>
     </option>
   </component>
@@ -195,6 +239,12 @@
             <path>
               <item name="testApps" type="b2602c69:ProjectViewProjectNode" />
               <item name="testApps" type="462c0819:PsiDirectoryNode" />
+              <item name="AB-TESTING" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testApps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testApps" type="462c0819:PsiDirectoryNode" />
               <item name="StoresApp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -220,12 +270,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AB-TESTING/server" />
       <recent name="$PROJECT_DIR$/AB-TESTING/credentials" />
       <recent name="$PROJECT_DIR$/AB-TESTING" />
       <recent name="$PROJECT_DIR$/StoresApp" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AB-TESTING/server" />
       <recent name="$PROJECT_DIR$/StoresApp" />
       <recent name="$PROJECT_DIR$/encryption" />
     </key>
@@ -262,12 +314,12 @@
       <workItem from="1519038390349" duration="19142000" />
       <workItem from="1519211649966" duration="27990000" />
       <workItem from="1519545765491" duration="26115000" />
-      <workItem from="1519633201772" duration="5196000" />
+      <workItem from="1519633201772" duration="9353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159486000" />
+    <option name="totallyTimeSpent" value="163643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1200" extended-state="6" />
@@ -331,88 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platformApp/editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding>
-            <element signature="e#1608#1781#0" expanded="false" />
-            <element signature="e#1686#1775#0" expanded="false" />
-            <element signature="e#1813#3776#0" expanded="false" />
-            <element signature="e#1830#3770#0" expanded="false" />
-            <element signature="e#1866#3760#0" expanded="false" />
-            <element signature="e#1892#3746#0" expanded="false" />
-            <element signature="e#1923#3728#0" expanded="false" />
-            <element signature="e#2005#3706#0" expanded="false" />
-            <element signature="e#2044#2338#0" expanded="false" />
-            <element signature="e#2090#2308#0" expanded="false" />
-            <element signature="e#2375#2672#0" expanded="false" />
-            <element signature="e#2421#2642#0" expanded="false" />
-            <element signature="e#2711#3006#0" expanded="false" />
-            <element signature="e#2757#2976#0" expanded="false" />
-            <element signature="e#3044#3337#0" expanded="false" />
-            <element signature="e#3090#3307#0" expanded="false" />
-            <element signature="e#3376#3680#0" expanded="false" />
-            <element signature="e#3422#3650#0" expanded="false" />
-            <element signature="e#3851#4284#0" expanded="false" />
-            <element signature="e#4048#4274#0" expanded="false" />
-            <element signature="e#4343#4563#0" expanded="false" />
-            <element signature="e#4401#4551#0" expanded="false" />
-            <element signature="e#4608#4979#0" expanded="false" />
-            <element signature="e#4668#4967#0" expanded="false" />
-            <element signature="e#4707#4914#0" expanded="false" />
-            <element signature="e#4780#4896#0" expanded="false" />
-            <element signature="e#5049#5286#0" expanded="false" />
-            <element signature="e#5312#5968#0" expanded="false" />
-            <element signature="e#5326#5356#0" expanded="false" />
-            <element signature="e#6000#6453#0" expanded="false" />
-            <element signature="e#6060#6441#0" expanded="false" />
-            <element signature="e#6099#6388#0" expanded="false" />
-            <element signature="e#6199#6370#0" expanded="false" />
-            <element signature="e#6500#6840#0" expanded="false" />
-            <element signature="e#6741#6828#0" expanded="false" />
-            <element signature="e#6875#7031#0" expanded="false" />
-            <element signature="e#7068#7219#0" expanded="false" />
-            <element signature="e#7255#7267#0" expanded="false" />
-            <element signature="e#7301#7888#0" expanded="false" />
-            <element signature="e#7954#8234#0" expanded="false" />
-            <element signature="e#8011#8223#0" expanded="false" />
-            <element signature="e#8266#8773#0" expanded="false" />
-            <element signature="e#8813#9411#0" expanded="false" />
-            <element signature="e#9452#9597#0" expanded="false" />
-            <element signature="e#9668#10003#0" expanded="false" />
-            <element signature="e#9779#9991#0" expanded="false" />
-            <element signature="e#10037#10092#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StoresApp/addToCart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StoresApp/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="78" lean-forward="false" selection-start-line="21" selection-start-column="78" selection-end-line="21" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StoresApp/viewerScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -975,18 +945,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/reporterServer.js">
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/credentials/server.crt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="501">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding />
         </state>
       </provider>

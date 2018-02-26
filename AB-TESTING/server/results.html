@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body ng-app="myApp" ng-controller="ctrl">
+    {{data}}
+  </body>
+</html>
+
+<script>
+    const app = angular.module('myApp', []);
+
+    app.controller('ctrl', async function ($scope, $http) {
+        const data = $http.get('/alldata').then(res => res.data).then(function (data) {
+          $scope.data = data;
+          console.log(data);
+        });
+    });
+    // fetch('').then()
+</script>
