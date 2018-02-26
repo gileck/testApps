@@ -491,18 +491,18 @@ module.exports = function () {
     let app;
 
     async function editorReady(_editorSDK, _appDefinitionId, options) {
-        console.log(_editorSDK);
+        console.log('editorReady editorrr READDDyyyy');
         const pageRef = await _editorSDK.pages.getCurrent();
 
         app = new App(_editorSDK, _appDefinitionId, pageRef);
 
         if (options.firstInstall) {
-            await app.install();
+            app.install();
         }
         // const container = await app.addAndConnect(BOX_SLIDE_SHOW, pageRef, 'mainContainer');
     }
 
-    async function onEvent(event) {
+    function onEvent(event) {
         console.log(event);
         if (app.eventHandlers[event.eventType]) {
             app.eventHandlers[event.eventType].call(app, event.eventPayload);
@@ -518,26 +518,44 @@ module.exports = function () {
                         connections: {
                             "mainContainer": {
                                 gfpp: {
-                                    mainActions: [{
-                                        id: 'SETTINGS', label: 'A/B Settings'
-                                    }, {
-                                        id: 'SETTINGS',
-                                        label: 'A/B Settings'
-                                    }],
-                                    enabledActions: {
-                                        settings: "hide",
-                                        design: "hide",
-                                        crop: "hide",
-                                        filters: "hide",
-                                        animation: "hide",
-                                        link: "hide",
-                                        stretch: "hide",
-                                        layout: "hide",
-                                        upgrade: "hide",
-                                        connect: "hide",
-                                        pinMode: "hide",
-                                        hide: "hide",
-                                    }
+                                    desktop: {
+                                        mainAction1: {
+                                            actionId: 'SETTINGS', label: 'A/B Settings'},
+                                        mainAction2: 'HIDE',
+                                        iconButtons: {
+                                            settings: "HIDE",
+                                            design: "HIDE",
+                                            crop: "HIDE",
+                                            filters: "HIDE",
+                                            animation: "HIDE",
+                                            link: "HIDE",
+                                            stretch: "HIDE",
+                                            layout: "HIDE",
+                                            upgrade: "HIDE",
+                                            connect: "HIDE",
+                                            pinMode: "HIDE",
+                                            hide: "HIDE",
+                                        }
+                                    },
+                                    mobile: {
+                                        mainAction1: {
+                                            actionId: 'SETTINGS', label: 'A/B Settings'},
+                                        mainAction2: 'HIDE',
+                                        iconButtons: {
+                                            settings: "HIDE",
+                                            design: "HIDE",
+                                            crop: "HIDE",
+                                            filters: "HIDE",
+                                            animation: "HIDE",
+                                            link: "HIDE",
+                                            stretch: "HIDE",
+                                            layout: "HIDE",
+                                            upgrade: "HIDE",
+                                            connect: "HIDE",
+                                            pinMode: "HIDE",
+                                            hide: "HIDE",
+                                        }
+                                    },
                                 }
                             }
                         }
@@ -546,6 +564,8 @@ module.exports = function () {
             }
         }
     }
+
+
 
     class App {
         constructor(editorSDK, appDefinitionId, pageRef) {
@@ -572,13 +592,13 @@ module.exports = function () {
         }
 
         async addComponent(compType, data) {
+            let compData = data
             return this.editorSDK.components.add('token', {
                 componentDefinition: {
                     componentType: compType,
-                    data: {
+                    data: Object.assign(compData, {
                         applicationId: this.appDefinitionId,
-                        ...data
-                    }
+                    })
                 },
                 pageRef: this.pageRef
             });
@@ -604,7 +624,7 @@ module.exports = function () {
 
         async install() {
             await this.addController();
-            const container = await app.addAndConnect(BOX_SLIDE_SHOW, this.pageRef, 'mainContainer');
+            const container = await this.addAndConnect(BOX_SLIDE_SHOW, this.pageRef, 'mainContainer');
         }
 
         async addController() {
@@ -635,9 +655,9 @@ module.exports = function () {
         }
 
         async onComponentDeleted() {
-            // await this.removeAllConnectedComponents();
-            // await this.removeController();
-            // await this.removeTPAWidget();
+            await this.removeAllConnectedComponents();
+            await this.removeController();
+            await this.removeTPAWidget();
         }
 
         async onControllerAdded() {
@@ -657,7 +677,7 @@ module.exports = function () {
             this.editorSDK.editor.openModalPanel(null, {
                 title: "MY MODAL",
                 componentRef,
-                initialData: {a: 1},
+                initialData: {a: 1, componentRef},
                 width: "20%",
                 height: "70%",
                 url: "modal.html"
@@ -705,14 +725,13 @@ module.exports = function () {
             this.editorSDK.editor.openModalPanel(null, {
                 title: "MY MODAL",
                 componentRef,
-                initialData: {a: 1},
+                initialData: {a: 1, componentRef},
                 width: "20%",
                 height: "70%",
                 url: "modal.html"
             })
         }
-
-    }
+     }
 
     return {
         editorReady,
