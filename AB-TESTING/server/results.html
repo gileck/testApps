@@ -6,18 +6,72 @@
     <title>Title</title>
   </head>
   <body ng-app="myApp" ng-controller="ctrl">
-    {{data}}
+    <div class="mainDiv">
+      <div class="resultsA">
+        <span class="main-number">
+          {{clicksA}} / {{impressionsA}}
+          ({{pctValueA}}%)
+        </span>
+      </div>
+      <div class="resultsB">
+        <span class="main-number">
+            {{clicksB}} / {{impressionsB}}
+          ({{pctValueB}}%)
+        </span>
+      </div>
+    </div>
   </body>
 </html>
 
 <script>
     const app = angular.module('myApp', []);
 
-    app.controller('ctrl', async function ($scope, $http) {
-        const data = $http.get('/alldata').then(res => res.data).then(function (data) {
-          $scope.data = data;
-          console.log(data);
-        });
+    app.controller('ctrl', async function ($scope, $http, $interval) {
+        function getData() {
+            $http.get('/alldata').then(res => res.data).then(function (data) {
+                $scope.data = data;
+                console.log();
+                const websiteData = data["https://gileck5.wixsite.com/mysite-60"];
+                $scope.impressionsA = websiteData[0].impressions;
+                $scope.clicksA = websiteData[0].clicks;
+                $scope.impressionsB = websiteData[1].impressions;
+                $scope.clicksB = websiteData[1].clicks;
+
+                $scope.pctValueA = Math.round(websiteData[0].clicks / websiteData[0].impressions  * 100);
+                $scope.pctValueB = Math.round(websiteData[1].clicks / websiteData[1].impressions  * 100);
+            });
+        }
+
+        getData();
+        $interval(() => getData(), 3000);
     });
-    // fetch('').then()
 </script>
+
+<style>
+  body {}
+
+  .main-number {
+    color: white;
+    font-size: 50px;
+
+  }
+  .mainDiv {
+    text-align: center;
+  }
+
+  .resultsA {
+    float: left;
+    background: green;
+    width: 50%;
+    height: 1000px;
+    line-height: 500px;
+  }
+
+  .resultsB {
+    float: right;
+    background: blue;
+    width: 50%;
+    height: 1000px;
+    line-height: 500px;
+  }
+</style>

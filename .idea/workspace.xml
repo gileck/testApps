@@ -23,13 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/credentials/server.crt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/credentials/server.key" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/db.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/AB-TESTING/server/results.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/reporterServer.js" afterPath="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
+      <change beforePath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
+      <change beforePath="$PROJECT_DIR$/AB-TESTING/server/results.html" afterPath="$PROJECT_DIR$/AB-TESTING/server/results.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,8 +41,8 @@
       <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="224">
+              <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -56,8 +51,8 @@
       <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="495">
+              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -76,7 +71,7 @@
       <file leaf-file-name="viewer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
+            <state relative-caret-position="585">
               <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
@@ -87,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+              <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -152,10 +147,10 @@
         <option value="$PROJECT_DIR$/AB-TESTING/reporterServer.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/db.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile" />
-        <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
         <option value="$PROJECT_DIR$/AB-TESTING/viewer.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/db.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/results.html" />
       </list>
     </option>
@@ -314,12 +309,12 @@
       <workItem from="1519038390349" duration="19142000" />
       <workItem from="1519211649966" duration="27990000" />
       <workItem from="1519545765491" duration="26115000" />
-      <workItem from="1519633201772" duration="9353000" />
+      <workItem from="1519633201772" duration="11927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163643000" />
+    <option name="totallyTimeSpent" value="166217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1200" extended-state="6" />
@@ -953,18 +948,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+        <state relative-caret-position="224">
+          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -977,18 +964,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="585">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/server/results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="495">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
           <folding />
         </state>
       </provider>
