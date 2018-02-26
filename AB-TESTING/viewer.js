@@ -6,22 +6,27 @@ function initAppForPage() {
     console.log("initAppForPage");
 }
 
-function pageReady($w, wix, variant) {
+function pageReady($w, wix, variant, measure) {
     const websiteURL = wix.location.baseUrl;
     console.log(variant);
     sendImpression(variant, websiteURL);
     $w("@mainContainer").changeSlide(variant);
-    $w("@SiteButton0").onClick(() => sendClickEvent(VARIANT_A, websiteURL));
-    $w("@SiteButton1").onClick(() => sendClickEvent(VARIANT_B, websiteURL));
+    if (measure === 'clickOnButton'){
+        $w("@SiteButton0").onClick(() => sendClickEvent(VARIANT_A, websiteURL));
+        $w("@SiteButton1").onClick(() => sendClickEvent(VARIANT_B, websiteURL));
+    } else {
+        $w("@SiteButton0").onMouseIn(() => sendEvent(VARIANT_A, websiteURL));
+        $w("@SiteButton1").onMouseIn(() => sendEvent(VARIANT_B, websiteURL));
+    }
 }
 
 function createControllers(controllerConfigs) {
     console.log(controllerConfigs);
     return controllerConfigs.map(controllerConfig => {
-      const {percentage} = controllerConfig.config;
+      const {percentage, measure} = controllerConfig.config;
       const variant = getVariant(percentage);
         return {
-            pageReady: ($w, Wix) => pageReady($w, Wix, variant),
+            pageReady: ($w, Wix) => pageReady($w, Wix, variant, measure),
             exports: {
                 getVariant() {
                     return variant;
