@@ -534,7 +534,8 @@ module.exports = function () {
                                     },
                                 }
                             }
-                        }
+                        },
+                        mainAction: {label: 'Configure A/B Test'}
                     }
                 }
             }
