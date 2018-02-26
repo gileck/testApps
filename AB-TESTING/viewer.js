@@ -13,8 +13,7 @@ function initAppForPage() {
 
 function pageReady($w, wix, {config}) {
     const websiteURL = wix.location.baseUrl;
-    debugger
-    const {percentage} = JSON.parse(config);
+    const {percentage} = config;
     //replace this with value from the connection config
     const variant = getVariant(percentage);
     console.log(variant);
