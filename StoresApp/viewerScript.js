@@ -63,12 +63,11 @@ function getStoresLogic() {
 
     function removeFromCart(productId) {
         console.log("removeFromCart", productId);
+        invokeOnAddedToCartSubscribers(productId, -1);
         return fetch(serverURL + '/removeFromCart/' + productId).then(() => invokeOnAddedToCartSubscribers(productId, -1));
-
         // console.log("addToCart", productId);
         // const productIndex = products.findIndex(product => product.productId === productId);
         // products.splice(productIndex, 1);
-        invokeOnAddedToCartSubscribers(productId, -1);
     }
 
     function subscribeToAddToCartEvent(callback) {

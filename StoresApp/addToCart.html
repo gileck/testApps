@@ -37,6 +37,7 @@
         Wix.getPublicAPI({appDefinitionId: '1515aba9-2828-7528-a270-ce1dda0e9826'}, function (api) {
             console.log(api);
             api.onItemAddedToCart(function (id, value) {
+
                 console.log();
                 numOfProduct = numOfProduct + value;
                 document.getElementById("num").innerText = numOfProduct;

@@ -471,9 +471,7 @@ module.exports = function () {
     async function editorReady(_editorSDK, _appDefinitionId, options) {
         console.log('editorReady editorrr READDDyyyy');
         const pageRef = await _editorSDK.pages.getCurrent();
-
         app = new App(_editorSDK, _appDefinitionId, pageRef);
-
         if (options.firstInstall) {
             app.install();
         }
