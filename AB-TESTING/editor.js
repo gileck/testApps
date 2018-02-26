@@ -162,18 +162,6 @@ const BOX_SLIDE_SHOW = {
                         "compId": "",
                         "skin": "wysiwyg.viewer.skins.button.BasicButton"
                     },
-                    "connections": {
-                        "type": "ConnectionList",
-                        "items": [{
-                            "type": "WixCodeConnectionItem", "role": "button2"
-                        }, {
-                            "controllerId": "dataItem-je2v4rm4",
-                            "isPrimary": true,
-                            "role": "ButtonA",
-                            "type": "ConnectionItem"
-                        }],
-                        "metaData": {"isPreset": false, "schemaVersion": "1.0", "isHidden": false}
-                    },
                     "activeModes": {}
                 }
             ],
@@ -384,16 +372,6 @@ const BOX_SLIDE_SHOW = {
                         "pageId": "",
                         "compId": "",
                         "skin": "wysiwyg.viewer.skins.button.BasicButton"
-                    },
-                    "connections": {
-                        "type": "ConnectionList",
-                        "items": [{"type": "WixCodeConnectionItem", "role": "button1"}, {
-                            "controllerId": "dataItem-je2v4rm4",
-                            "isPrimary": true,
-                            "role": "ButtonB",
-                            "type": "ConnectionItem"
-                        }],
-                        "metaData": {"isPreset": false, "schemaVersion": "1.0", "isHidden": false}
                     },
                     "mobileStructure": {
                         "layout": {
@@ -623,6 +601,22 @@ module.exports = function () {
         async install() {
             await this.addController();
             const container = await this.addAndConnect(BOX_SLIDE_SHOW, this.pageRef, 'mainContainer');
+            const slides = await this.editorSDK.components.getChildren('fff', {
+                componentRef: container,
+                recursive: false
+            });
+            const controllerRef = await this.getController();
+            for (var i=0; i< slides.length; i++) {
+                const children = await this.editorSDK.components.getChildren('fff', {
+                    componentRef: slides[i],
+                    recursive: true
+                });
+                for (var j=0; j< children.length; j++) {
+                    const compType = await this.editorSDK.components.getType('sdfsdf', {componentRef: children[j]})
+                    const typeSplit = compType.split('.');
+                    await this.connect(controllerRef, children[j], typeSplit[typeSplit.length-1]+i);
+                }
+            }
         }
 
         async addController() {
@@ -632,7 +626,8 @@ module.exports = function () {
                     data: {
                         applicationId: this.appDefinitionId,
                         controllerType: 'controller1',
-                        name: 'controller1'
+                        name: 'controller1',
+                        settings: JSON.stringify({percentage: 50})
                     }
                 },
                 pageRef: this.pageRef
@@ -672,10 +667,11 @@ module.exports = function () {
         }
 
         async onControllerSettingsButtonClicked({componentRef}) {
-            this.editorSDK.editor.openModalPanel(null, {
+            const {settings} = await this.editorSDK.components.data.get(componentRef);
+            this.editorSDK.editor.openComponentPanel(null, {
                 title: "MY MODAL",
                 componentRef,
-                initialData: {a: 1, componentRef},
+                initialData: {a: 1, settings, componentRef},
                 width: "20%",
                 height: "70%",
                 url: "modal.html"

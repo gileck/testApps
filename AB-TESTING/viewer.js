@@ -11,23 +11,23 @@ function initAppForPage() {
     console.log("initAppForPage");
 }
 
-function pageReady($w, Wix) {
-    const websiteURL = Wix.location.baseUrl;
-    const variantPCT = 50;
+function pageReady($w, wix, {config}) {
+    const websiteURL = wix.location.baseUrl;
+    const {percentage} = JSON.parse(config);
     //replace this with value from the connection config
-    const chosenVariant = getVariant(variantPCT);
-    console.log(chosenVariant);
-    sendImpression(chosenVariant, websiteURL);
-    $w("@mainContainer").changeSlide(chosenVariant);
-    $w("@ButtonA").onClick(() => sendEvent(VARIANT_A, websiteURL));
-    $w("@ButtonB").onClick(() => sendEvent(VARIANT_B, websiteURL));
+    const variant = getVariant(percentage);
+    console.log(variant);
+    sendImpression(variant, websiteURL);
+    $w("@mainContainer").changeSlide(variant);
+    $w("@SiteButton0").onClick(() => sendEvent(VARIANT_A, websiteURL));
+    $w("@SiteButton1").onClick(() => sendEvent(VARIANT_B, websiteURL));
 }
 
 function createControllers(controllerConfigs) {
     console.log(controllerConfigs);
     return controllerConfigs.map(controllerConfig => {
         return {
-            pageReady: pageReady
+            pageReady: ($w, Wix) => pageReady($w, Wix, controllerConfig)
         }
     });
 }
@@ -43,12 +43,8 @@ async function sendEvent(variant, url) {
 /**
  * simple algorithm for choosing a random weighed number
  */
-function getVariant(varientAPercant) {
-    const array = [];
-    for (let i = 0; i < varientAPercant; i++) array.push(0)
-    for (let i = varientAPercant; i < 100; i++) array.push(1)
-    const rundomIndexOfArray = Math.floor(Math.random() * 100);
-    return array[rundomIndexOfArray];
+function getVariant(percentage) {
+  return Number(Math.random() * 100 >= percentage);
 }
 
 module.exports = {
