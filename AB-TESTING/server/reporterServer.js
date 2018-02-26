@@ -22,10 +22,17 @@ app.get('/sendImpression', (req, res) => {
     res.end()
 });
 
-app.get('/sendEvent', (req, res) => {
+app.get('/sendClickEvent', (req, res) => {
     const websiteURL = req.query.url;
     const variant = req.query.variant;
     db.addClicks(websiteURL, variant);
+    res.end()
+});
+
+app.get('/sendHoverEvent', (req, res) => {
+    const websiteURL = req.query.url;
+    const variant = req.query.variant;
+    db.addHover(websiteURL, variant);
     res.end()
 });
 

@@ -541,8 +541,6 @@ module.exports = function () {
         }
     }
 
-
-
     class App {
         constructor(editorSDK, appDefinitionId, pageRef) {
             this.editorSDK = editorSDK;
@@ -606,12 +604,12 @@ module.exports = function () {
                 recursive: false
             });
             const controllerRef = await this.getController();
-            for (var i=0; i< slides.length; i++) {
+            for (let i=0; i< slides.length; i++) {
                 const children = await this.editorSDK.components.getChildren('fff', {
                     componentRef: slides[i],
                     recursive: true
                 });
-                for (var j=0; j< children.length; j++) {
+                for (let j=0; j< children.length; j++) {
                     const compType = await this.editorSDK.components.getType('sdfsdf', {componentRef: children[j]})
                     const typeSplit = compType.split('.');
                     await this.connect(controllerRef, children[j], typeSplit[typeSplit.length-1]+i);

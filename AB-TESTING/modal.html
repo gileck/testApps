@@ -8,6 +8,9 @@
   </head>
   <body>
     <div class="main">
+      <header class="header">
+        Trigger Test
+      </header>
       <div>
         <span class="letter">A</span>
         <input id="slider" type="range" class="range" min="0" max="100" step="10" onchange="onChange(this.value)">
@@ -47,8 +50,9 @@
   .header {
     display: flex;
     width: 100%;
-    background: lightblue;
+    background: lightgray;
     height: 100px;
+    text-align: center;
   }
 
   .header-inner {
