@@ -3,7 +3,7 @@ const addToCartWidgetId = "15155906-4f97-a407-76b1-4ea14d296d47";
 const mainWidgetId = "14ffd3c2-de00-73d6-1831-64f837bb83f6";
 const onAddedToCartSubsribers = [];
 const productsInCart = [];
-const serverURL = "https://localhost:3000";
+const serverURL = "https://192.168.230.26:3000";
 const VARIANT_A = 0;
 const VARIANT_B = 1;
 
