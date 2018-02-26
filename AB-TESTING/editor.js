@@ -628,7 +628,7 @@ module.exports = function () {
                         applicationId: this.appDefinitionId,
                         controllerType: 'controller1',
                         name: 'controller1',
-                        settings: JSON.stringify({percentage: 50})
+                        settings: JSON.stringify({percentage: 50, measure:'clickOnButton'})
                     }
                 },
                 pageRef: this.pageRef
@@ -717,12 +717,14 @@ module.exports = function () {
         }
 
         async componentGfppClicked({componentRef}) {
-            this.editorSDK.editor.openModalPanel(null, {
+            const controllerRef = await this.getController();
+            const {settings} = await this.editorSDK.components.data.get('token', {componentRef: controllerRef});
+            this.editorSDK.editor.openComponentPanel(null, {
                 title: "MY MODAL",
                 componentRef,
-                initialData: {a: 1, componentRef},
+                initialData: {a: 1, settings, controllerRef},
                 width: "20%",
-                height: "70%",
+                height: '400px',
                 url: "modal.html"
             })
         }
