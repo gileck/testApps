@@ -23,8 +23,8 @@
     editorSDK.panel.onEvent(event => {
         switch (event.eventType) {
             case 'startConfiguration':
-            controllerRef = event.eventPayload.initialData.settings.controllerRef
-            document.querySelector('#slider').value = event.eventPayload.initialData.settings.percentage
+            controllerRef = event.eventPayload.initialData.controllerRef
+            document.querySelector('#slider').value = JSON.parse(event.eventPayload.initialData.settings).percentage
         }
     });
     function onChange(val) {
@@ -32,7 +32,7 @@
         editorSDK.document.components.data.update('someToken', {
           componentRef: controllerRef,
           data: {
-            settings: JSON.stringify({percentage: val})
+            settings: JSON.stringify({percentage: Number(val)})
           }
         })
       }

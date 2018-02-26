@@ -666,12 +666,12 @@ module.exports = function () {
             this.editorSDK.components.remove(null, {componentRef: widget.componentRef});
         }
 
-        async onControllerSettingsButtonClicked({componentRef}) {
-            const {settings} = await this.editorSDK.components.data.get(componentRef);
+        async onControllerSettingsButtonClicked({controllerRef}) {
+            const {settings} = await this.editorSDK.components.data.get('token', {componentRef: controllerRef});
             this.editorSDK.editor.openComponentPanel(null, {
                 title: "MY MODAL",
-                componentRef,
-                initialData: {a: 1, settings, componentRef},
+                componentRef: controllerRef,
+                initialData: {a: 1, settings, controllerRef},
                 width: "20%",
                 height: "70%",
                 url: "modal.html"
