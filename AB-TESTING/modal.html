@@ -12,7 +12,8 @@
     <script type="text/javascript" src="https://static.parastorage.com/services/js-platform-editor-sdk/1.109.0/lib/editorSDK.min.js"></script>
   </head>
   <body>
-    <div class="main">
+    <img class="loader" id="loader" src="https://cdn.dribbble.com/users/338744/screenshots/2886346/load-dribbble.gif"/>
+    <div id="main-div" class="main">
       <div>
         <div wix-ctrl="SectionDividerLabeled" wix-options="{label: 'Trigger Test', infoText: 'info text'}">
         </div>
@@ -35,17 +36,13 @@
           <div class="slider-value-number" id="slider-value-number-a"></div>
           <div class="slider-value-number" id="slider-value-number-b"></div>
         </div>
-
-        <!--<span class="letter">A</span>-->
-        <!--<input id="slider" type="range" class="range" min="0" max="100" step="10" onchange="onChange(this.value)">-->
-        <!--<span class="letter">B</span>-->
       </div>
-      <div>
-      </div>
+    </div>
   </body>
 </html>
 
 <script>
+    $("#main-div").hide();
     $(document).ready(function() {
 
         let controllerRef, controllerSettings;
@@ -59,9 +56,10 @@
                     $("#sampleSlider").getCtrl().setValue(controllerSettings.percentage);
                     // document.querySelector('#slider').value = controllerSettings.percentage;
                     // document.querySelector('#' + controllerSettings.measure).checked = true;
-                    console.log(controllerSettings);
                     document.querySelector("#slider-value-number-a").innerHTML = controllerSettings.percentage + "%";
                     document.querySelector("#slider-value-number-b").innerHTML = (100 - controllerSettings.percentage) + "%";
+                    $("#loader").hide();
+                    $("#main-div").show();
             }
         });
 
@@ -152,4 +150,11 @@
     justify-content: space-between;
     margin: 5px 19px 0px 16px;
   }
+
+  .loader {
+    margin-left: 25%;
+    margin-top: 37%;
+    width: 50%;
+  }
+
 </style>
