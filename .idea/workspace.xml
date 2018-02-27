@@ -23,7 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/modal.html" afterPath="$PROJECT_DIR$/AB-TESTING/modal.html" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
     </list>
@@ -43,12 +42,16 @@
         <entry file="file://$PROJECT_DIR$/AB-TESTING/editor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2820">
-              <caret line="721" column="29" lean-forward="false" selection-start-line="721" selection-start-column="29" selection-end-line="721" selection-end-column="29" />
+              <caret line="722" column="29" lean-forward="false" selection-start-line="722" selection-start-column="29" selection-end-line="722" selection-end-column="29" />
               <folding>
                 <element signature="e#23#19433#0" expanded="false" />
                 <element signature="e#19551#19906#0" expanded="false" />
                 <element signature="e#19936#20109#0" expanded="false" />
                 <element signature="e#20141#22878#0" expanded="false" />
+                <marker date="1519666960402" expanded="true" signature="26134:26620" ph="{...}" />
+                <marker date="1519666960402" expanded="true" signature="26273:26549" ph="{&quot;name&quot;: 'controller1'...}" />
+                <marker date="1519666960402" expanded="true" signature="30108:30320" ph="{&quot;connectToRef&quot;: componentRef...}" />
+                <marker date="1519666960402" expanded="true" signature="30980:31048" ph="{&quot;editorReady&quot;: editorReady...}" />
               </folding>
             </state>
           </provider>
@@ -77,8 +80,8 @@
       <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="79" column="64" lean-forward="true" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
+            <state relative-caret-position="122">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -102,7 +105,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="15" />
-              <folding />
+              <folding>
+                <marker date="1519666960403" expanded="true" signature="2129:2131" ph="{&quot;initAppForPage&quot;: initAppForPage...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="245" lean-forward="false" selection-start-line="0" selection-start-column="245" selection-end-line="0" selection-end-column="245" />
+              <caret line="0" column="330" lean-forward="false" selection-start-line="0" selection-start-column="330" selection-end-line="0" selection-end-column="330" />
               <folding />
             </state>
           </provider>
@@ -224,11 +229,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="-1920" />
-    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1177" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -360,15 +364,15 @@
       <workItem from="1519211649966" duration="27990000" />
       <workItem from="1519545765491" duration="26115000" />
       <workItem from="1519633201772" duration="17352000" />
-      <workItem from="1519664705307" duration="1997000" />
+      <workItem from="1519664705307" duration="3597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181036000" />
+    <option name="totallyTimeSpent" value="182636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="23" width="1920" height="1177" extended-state="0" />
+    <frame x="-1920" y="0" width="1920" height="1200" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1195366" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -379,7 +383,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3216266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3087844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -718,7 +722,7 @@
     <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="245" lean-forward="false" selection-start-line="0" selection-start-column="245" selection-end-line="0" selection-end-column="245" />
+          <caret line="0" column="330" lean-forward="false" selection-start-line="0" selection-start-column="330" selection-end-line="0" selection-end-column="330" />
           <folding />
         </state>
       </provider>
@@ -735,7 +739,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1519666960403" expanded="true" signature="2129:2131" ph="{&quot;initAppForPage&quot;: initAppForPage...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -750,12 +756,16 @@
     <entry file="file://$PROJECT_DIR$/AB-TESTING/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
-          <caret line="721" column="29" lean-forward="false" selection-start-line="721" selection-start-column="29" selection-end-line="721" selection-end-column="29" />
+          <caret line="722" column="29" lean-forward="false" selection-start-line="722" selection-start-column="29" selection-end-line="722" selection-end-column="29" />
           <folding>
             <element signature="e#23#19433#0" expanded="false" />
             <element signature="e#19551#19906#0" expanded="false" />
             <element signature="e#19936#20109#0" expanded="false" />
             <element signature="e#20141#22878#0" expanded="false" />
+            <marker date="1519666960402" expanded="true" signature="26134:26620" ph="{...}" />
+            <marker date="1519666960402" expanded="true" signature="26273:26549" ph="{&quot;name&quot;: 'controller1'...}" />
+            <marker date="1519666960402" expanded="true" signature="30108:30320" ph="{&quot;connectToRef&quot;: componentRef...}" />
+            <marker date="1519666960402" expanded="true" signature="30980:31048" ph="{&quot;editorReady&quot;: editorReady...}" />
           </folding>
         </state>
       </provider>
@@ -770,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="79" column="64" lean-forward="true" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
+        <state relative-caret-position="122">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
