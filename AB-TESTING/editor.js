@@ -79,7 +79,7 @@ const BOX_SLIDE_SHOW = {
                                 "width": 207,
                                 "height": 46,
                                 "x": 146,
-                                "y": 287,
+                                "y": 288,
                                 "scale": 1,
                                 "rotationInDegrees": 0,
                                 "fixedPosition": false
@@ -445,7 +445,7 @@ const BOX_SLIDE_SHOW = {
                         "label": "SHOP NOW",
                         "link": {
                             "type": "PageLink",
-                            "pageId": "#jeu3g",
+                            "pageId": "#vp6we",
                             "metaData": {
                                 "isPreset": false,
                                 "schemaVersion": "1.0",
@@ -639,80 +639,13 @@ const BOX_SLIDE_SHOW = {
                     "type": "Container",
                     "components": [
                         {
-                            "type": "Container",
-                            "components": [],
-                            "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin",
-                            "layout": {
-                                "width": 245,
-                                "height": 24,
-                                "x": 123,
-                                "y": 196,
-                                "scale": 1,
-                                "rotationInDegrees": 0,
-                                "fixedPosition": false
-                            },
-                            "componentType": "mobile.core.components.Container",
-                            "mobileHints": {
-                                "type": "MobileHints",
-                                "author": "studio",
-                                "recommendedScale": 1,
-                                "recommendedWidth": 206,
-                                "recommendedHeight": 28
-                            },
-                            "style": {
-                                "type": "TopLevelStyle",
-                                "metaData": {
-                                    "isPreset": false,
-                                    "schemaVersion": "1.0",
-                                    "isHidden": false
-                                },
-                                "style": {
-                                    "properties": {
-                                        "alpha-bg": "1",
-                                        "alpha-brd": "1",
-                                        "bg": "#FF8C62",
-                                        "boxShadowToggleOn-shd": "false",
-                                        "brd": "#FFCBAA",
-                                        "brw": "0",
-                                        "rd": "0px",
-                                        "shd": "0px 1px 4px 0px rgba(0,0,0,0.6)"
-                                    },
-                                    "propertiesSource": {
-                                        "alpha-bg": "value",
-                                        "alpha-brd": "value",
-                                        "bg": "value",
-                                        "boxShadowToggleOn-shd": "value",
-                                        "brd": "value",
-                                        "brw": "value",
-                                        "rd": "value",
-                                        "shd": "value"
-                                    },
-                                    "groups": {}
-                                },
-                                "componentClassName": "mobile.core.components.Container",
-                                "pageId": "",
-                                "compId": "",
-                                "styleType": "custom",
-                                "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin"
-                            },
-                            "connections": {
-                                "type": "ConnectionList",
-                                "items": [
-                                    {
-                                        "type": "WixCodeConnectionItem",
-                                        "role": "box2"
-                                    }
-                                ]
-                            }
-                        },
-                        {
                             "type": "Component",
                             "skin": "wysiwyg.viewer.skins.button.BasicButton",
                             "layout": {
                                 "width": 207,
                                 "height": 46,
-                                "x": 147,
-                                "y": 267,
+                                "x": 114,
+                                "y": 249,
                                 "scale": 1,
                                 "rotationInDegrees": 0,
                                 "fixedPosition": false
@@ -728,7 +661,7 @@ const BOX_SLIDE_SHOW = {
                                 "label": "SHOP NOW",
                                 "link": {
                                     "type": "PageLink",
-                                    "pageId": "#jeu3g",
+                                    "pageId": "#vp6we",
                                     "metaData": {
                                         "isPreset": false,
                                         "schemaVersion": "1.0",
@@ -743,13 +676,6 @@ const BOX_SLIDE_SHOW = {
                                 },
                                 "align": "center",
                                 "margin": 0
-                            },
-                            "mobileHints": {
-                                "type": "MobileHints",
-                                "author": "studio",
-                                "recommendedScale": 0.90702945,
-                                "recommendedWidth": 135,
-                                "recommendedHeight": 35
                             },
                             "style": {
                                 "type": "TopLevelStyle",
@@ -772,7 +698,7 @@ const BOX_SLIDE_SHOW = {
                                         "brd": "#323232",
                                         "brdh": "#323232",
                                         "brw": "0px",
-                                        "fnt": "normal normal 700 19px/1.4em helvetica-w01-light",
+                                        "fnt": "normal normal 700 14px/1.4em helvetica-w01-light",
                                         "rd": "0px",
                                         "shd": "0px 1px 4px 0px rgba(0,0,0,0.6)",
                                         "txt": "color_15",
@@ -814,8 +740,8 @@ const BOX_SLIDE_SHOW = {
                             "layout": {
                                 "width": 285,
                                 "height": 22,
-                                "x": 108,
-                                "y": 197,
+                                "x": 75,
+                                "y": 179,
                                 "scale": 1,
                                 "rotationInDegrees": 0,
                                 "fixedPosition": false
@@ -840,13 +766,6 @@ const BOX_SLIDE_SHOW = {
                                 "brightness": 1,
                                 "packed": true
                             },
-                            "mobileHints": {
-                                "type": "MobileHints",
-                                "author": "studio",
-                                "recommendedScale": 1.2528584,
-                                "recommendedWidth": 206,
-                                "recommendedHeight": 56
-                            },
                             "style": "txtNew",
                             "connections": {
                                 "type": "ConnectionList",
@@ -857,167 +776,19 @@ const BOX_SLIDE_SHOW = {
                                     }
                                 ]
                             }
-                        },
-                        {
-                            "type": "Component",
-                            "layout": {
-                                "width": 425,
-                                "height": 65,
-                                "x": 33,
-                                "y": 77,
-                                "scale": 1,
-                                "rotationInDegrees": 0,
-                                "fixedPosition": false
-                            },
-                            "componentType": "wysiwyg.viewer.components.WRichText",
-                            "data": {
-                                "type": "StyledText",
-                                "metaData": {
-                                    "isPreset": false,
-                                    "schemaVersion": "1.0",
-                                    "isHidden": false
-                                },
-                                "text": "<h2 class=\"font_2\" style=\"font-size: 59px; line-height: 1em; text-align: center;\"><span style=\"font-family:poppins-semibold,poppins,sans-serif;\"><span style=\"font-size:59px;\"><span style=\"letter-spacing:0.03em\"><span class=\"color_2\">60% OFF</span></span></span></span></h2>",
-                                "stylesMapId": "CK_EDITOR_PARAGRAPH_STYLES",
-                                "linkList": []
-                            },
-                            "props": {
-                                "type": "WRichTextProperties",
-                                "metaData": {
-                                    "schemaVersion": "1.0"
-                                },
-                                "brightness": 1,
-                                "packed": true
-                            },
-                            "style": "txtNew",
-                            "connections": {
-                                "type": "ConnectionList",
-                                "items": [
-                                    {
-                                        "type": "WixCodeConnectionItem",
-                                        "role": "text22"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "Component",
-                            "layout": {
-                                "width": 425,
-                                "height": 33,
-                                "x": 33,
-                                "y": 142,
-                                "scale": 1,
-                                "rotationInDegrees": 0,
-                                "fixedPosition": false
-                            },
-                            "componentType": "wysiwyg.viewer.components.WRichText",
-                            "data": {
-                                "type": "StyledText",
-                                "metaData": {
-                                    "isPreset": false,
-                                    "schemaVersion": "1.0",
-                                    "isHidden": false
-                                },
-                                "text": "<h2 class=\"font_2\" style=\"font-size: 30px; line-height: 1em; text-align: center;\"><span style=\"font-size:30px;\"><span style=\"font-family:poppins-semibold,poppins,sans-serif\"><span style=\"letter-spacing:0.03em\"><span class=\"color_2\">&amp; Free Shipping</span></span></span></span></h2>",
-                                "stylesMapId": "CK_EDITOR_PARAGRAPH_STYLES",
-                                "linkList": []
-                            },
-                            "props": {
-                                "type": "WRichTextProperties",
-                                "metaData": {
-                                    "schemaVersion": "1.0"
-                                },
-                                "brightness": 1,
-                                "packed": true
-                            },
-                            "style": "txtNew",
-                            "connections": {
-                                "type": "ConnectionList",
-                                "items": [
-                                    {
-                                        "type": "WixCodeConnectionItem",
-                                        "role": "text23"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "Container",
-                            "components": [],
-                            "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin",
-                            "layout": {
-                                "width": 465,
-                                "height": 435,
-                                "x": 18,
-                                "y": 12.5,
-                                "scale": 1,
-                                "rotationInDegrees": 0,
-                                "fixedPosition": false
-                            },
-                            "componentType": "mobile.core.components.Container",
-                            "style": {
-                                "type": "TopLevelStyle",
-                                "metaData": {
-                                    "isPreset": false,
-                                    "schemaVersion": "1.0",
-                                    "isHidden": false
-                                },
-                                "style": {
-                                    "properties": {
-                                        "alpha-bg": "0",
-                                        "alpha-brd": "1",
-                                        "bg": "rgba(255,255,255,1)",
-                                        "boxShadowToggleOn-shd": "false",
-                                        "brd": "#324158",
-                                        "brw": "4",
-                                        "rd": "0px",
-                                        "shd": "0px 1px 4px 0px rgba(0,0,0,0.6)"
-                                    },
-                                    "propertiesSource": {
-                                        "alpha-bg": "value",
-                                        "bg": "value",
-                                        "brd": "value",
-                                        "brw": "value",
-                                        "rd": "value",
-                                        "shd": "value"
-                                    },
-                                    "groups": {}
-                                },
-                                "componentClassName": "mobile.core.components.Container",
-                                "pageId": "",
-                                "compId": "",
-                                "styleType": "custom",
-                                "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin"
-                            },
-                            "connections": {
-                                "type": "ConnectionList",
-                                "items": [
-                                    {
-                                        "type": "WixCodeConnectionItem",
-                                        "role": "box7"
-                                    }
-                                ]
-                            }
                         }
                     ],
                     "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin",
                     "layout": {
-                        "width": 489,
-                        "height": 460,
-                        "x": 0,
-                        "y": 0,
+                        "width": 405,
+                        "height": 344,
+                        "x": 73,
+                        "y": 51,
                         "scale": 1,
                         "rotationInDegrees": 0,
                         "fixedPosition": false
                     },
                     "componentType": "mobile.core.components.Container",
-                    "mobileHints": {
-                        "type": "MobileHints",
-                        "author": "studio",
-                        "recommendedScale": 1,
-                        "recommendedWidth": 280
-                    },
                     "style": {
                         "type": "TopLevelStyle",
                         "metaData": {
@@ -1027,20 +798,18 @@ const BOX_SLIDE_SHOW = {
                         },
                         "style": {
                             "properties": {
-                                "alpha-bg": "1",
+                                "alpha-bg": "0",
                                 "alpha-brd": "1",
-                                "bg": "#FFCBAA",
+                                "bg": "#DEBCB1",
                                 "boxShadowToggleOn-shd": "false",
-                                "brd": "#FFCBAA",
-                                "brw": "0",
+                                "brd": "#FF8C62",
+                                "brw": "4",
                                 "rd": "0px",
                                 "shd": "0px 1px 4px 0px rgba(0,0,0,0.6)"
                             },
                             "propertiesSource": {
                                 "alpha-bg": "value",
-                                "alpha-brd": "value",
                                 "bg": "value",
-                                "boxShadowToggleOn-shd": "value",
                                 "brd": "value",
                                 "brw": "value",
                                 "rd": "value",
@@ -1059,7 +828,165 @@ const BOX_SLIDE_SHOW = {
                         "items": [
                             {
                                 "type": "WixCodeConnectionItem",
-                                "role": "box1"
+                                "role": "box14"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Component",
+                    "layout": {
+                        "width": 425,
+                        "height": 65,
+                        "x": 78,
+                        "y": 111,
+                        "scale": 1,
+                        "rotationInDegrees": 0,
+                        "fixedPosition": false
+                    },
+                    "componentType": "wysiwyg.viewer.components.WRichText",
+                    "data": {
+                        "type": "StyledText",
+                        "metaData": {
+                            "isPreset": false,
+                            "schemaVersion": "1.0",
+                            "isHidden": false
+                        },
+                        "text": "<h2 class=\"font_2\" style=\"font-size: 59px; line-height: 1em; text-align: center;\"><span style=\"font-family:poppins-semibold,poppins,sans-serif;\"><span style=\"font-size:59px;\"><span style=\"letter-spacing:0.03em\"><span class=\"color_2\">60% OFF</span></span></span></span></h2>",
+                        "stylesMapId": "CK_EDITOR_PARAGRAPH_STYLES",
+                        "linkList": []
+                    },
+                    "props": {
+                        "type": "WRichTextProperties",
+                        "metaData": {
+                            "schemaVersion": "1.0"
+                        },
+                        "brightness": 1,
+                        "packed": true
+                    },
+                    "mobileHints": {
+                        "type": "MobileHints",
+                        "author": "duplicate",
+                        "originalCompId": "comp-je5acovc",
+                        "recommendedScale": 0.8378378,
+                        "recommendedWidth": 232,
+                        "recommendedHeight": 10
+                    },
+                    "style": "txtNew",
+                    "connections": {
+                        "type": "ConnectionList",
+                        "items": [
+                            {
+                                "type": "WixCodeConnectionItem",
+                                "role": "text22"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Component",
+                    "layout": {
+                        "width": 425,
+                        "height": 33,
+                        "x": 78,
+                        "y": 176,
+                        "scale": 1,
+                        "rotationInDegrees": 0,
+                        "fixedPosition": false
+                    },
+                    "componentType": "wysiwyg.viewer.components.WRichText",
+                    "data": {
+                        "type": "StyledText",
+                        "metaData": {
+                            "isPreset": false,
+                            "schemaVersion": "1.0",
+                            "isHidden": false
+                        },
+                        "text": "<h2 class=\"font_2\" style=\"font-size: 30px; line-height: 1em; text-align: center;\"><span style=\"font-size:30px;\"><span style=\"font-family:poppins-semibold,poppins,sans-serif\"><span style=\"letter-spacing:0.03em\"><span class=\"color_2\">&amp; Free Shipping</span></span></span></span></h2>",
+                        "stylesMapId": "CK_EDITOR_PARAGRAPH_STYLES",
+                        "linkList": []
+                    },
+                    "props": {
+                        "type": "WRichTextProperties",
+                        "metaData": {
+                            "schemaVersion": "1.0"
+                        },
+                        "brightness": 1,
+                        "packed": true
+                    },
+                    "mobileHints": {
+                        "type": "MobileHints",
+                        "author": "duplicate",
+                        "originalCompId": "comp-je5acowo",
+                        "recommendedScale": 0.7777778,
+                        "recommendedWidth": 232,
+                        "recommendedHeight": 10
+                    },
+                    "style": "txtNew",
+                    "connections": {
+                        "type": "ConnectionList",
+                        "items": [
+                            {
+                                "type": "WixCodeConnectionItem",
+                                "role": "text23"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Container",
+                    "components": [],
+                    "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin",
+                    "layout": {
+                        "width": 405,
+                        "height": 345,
+                        "x": 88,
+                        "y": 70,
+                        "scale": 1,
+                        "rotationInDegrees": 0,
+                        "fixedPosition": false
+                    },
+                    "componentType": "mobile.core.components.Container",
+                    "style": {
+                        "type": "TopLevelStyle",
+                        "metaData": {
+                            "isPreset": false,
+                            "schemaVersion": "1.0",
+                            "isHidden": false
+                        },
+                        "style": {
+                            "properties": {
+                                "alpha-bg": "0",
+                                "alpha-brd": "1",
+                                "bg": "#DEBCB1",
+                                "boxShadowToggleOn-shd": "false",
+                                "brd": "#2F2E2E",
+                                "brw": "4",
+                                "rd": "0px",
+                                "shd": "0px 1px 4px 0px rgba(0,0,0,0.6)"
+                            },
+                            "propertiesSource": {
+                                "alpha-bg": "value",
+                                "bg": "value",
+                                "brd": "value",
+                                "brw": "value",
+                                "rd": "value",
+                                "shd": "value"
+                            },
+                            "groups": {}
+                        },
+                        "componentClassName": "mobile.core.components.Container",
+                        "pageId": "",
+                        "compId": "",
+                        "styleType": "custom",
+                        "skin": "wysiwyg.viewer.skins.area.DefaultAreaSkin"
+                    },
+                    "connections": {
+                        "type": "ConnectionList",
+                        "items": [
+                            {
+                                "type": "WixCodeConnectionItem",
+                                "role": "box15"
                             }
                         ]
                     }
@@ -1176,8 +1103,8 @@ const BOX_SLIDE_SHOW = {
     "layout": {
         "width": 1116,
         "height": 460,
-        "x": -33,
-        "y": 9,
+        "x": 0,
+        "y": 0,
         "scale": 1,
         "rotationInDegrees": 0,
         "fixedPosition": false
