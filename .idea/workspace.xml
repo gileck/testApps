@@ -25,8 +25,6 @@
     <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/editor.js" afterPath="$PROJECT_DIR$/AB-TESTING/editor.js" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/modal.html" afterPath="$PROJECT_DIR$/AB-TESTING/modal.html" />
-      <change beforePath="$PROJECT_DIR$/AB-TESTING/server/db.js" afterPath="$PROJECT_DIR$/AB-TESTING/server/db.js" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" afterPath="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
       <change beforePath="$PROJECT_DIR$/AB-TESTING/viewer.js" afterPath="$PROJECT_DIR$/AB-TESTING/viewer.js" />
@@ -43,26 +41,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="editor.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="467" column="30" lean-forward="true" selection-start-line="467" selection-start-column="30" selection-end-line="467" selection-end-column="30" />
+            <state relative-caret-position="0">
+              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding>
-                <element signature="e#23#19433#0" expanded="false" />
-                <element signature="e#19551#19906#0" expanded="false" />
-                <element signature="e#19936#20109#0" expanded="false" />
-                <element signature="e#20141#22878#0" expanded="false" />
+                <element signature="e#23#66743#0" expanded="false" />
+                <element signature="e#66861#67216#0" expanded="false" />
+                <element signature="e#67246#67419#0" expanded="false" />
+                <element signature="e#67451#70188#0" expanded="false" />
+                <marker date="1519721420377" expanded="true" signature="12107:12157" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="12174:12188" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="12229:12314" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="12345:12430" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="12433:12439" ph=" " />
+                <marker date="1519721420377" expanded="true" signature="15770:15824" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="15841:15889" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="15906:15921" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="15938:15959" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="18715:18769" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="18786:18801" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="18818:18865" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="18882:18903" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="18930:18935" ph="&amp;" />
+                <marker date="1519721420377" expanded="true" signature="48736:48786" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="48803:48817" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="48858:48943" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="48974:49059" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="49062:49068" ph=" " />
+                <marker date="1519721420377" expanded="true" signature="54086:54140" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="54157:54205" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="54222:54237" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="54254:54275" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="57166:57220" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="57237:57252" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="57269:57316" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="57333:57354" ph="..." />
+                <marker date="1519721420377" expanded="true" signature="57381:57386" ph="&amp;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="280">
+              <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -104,8 +130,8 @@
       <file leaf-file-name="viewer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+            <state relative-caret-position="282">
+              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -124,8 +150,8 @@
       <file leaf-file-name="dbFile.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="0" column="289" lean-forward="true" selection-start-line="0" selection-start-column="289" selection-end-line="0" selection-end-column="289" />
+            <state relative-caret-position="30">
+              <caret line="0" column="579" lean-forward="false" selection-start-line="0" selection-start-column="579" selection-end-line="0" selection-end-column="579" />
               <folding />
             </state>
           </provider>
@@ -168,6 +194,8 @@
       <find>$scope</find>
       <find>radioButtons</find>
       <find>sampleSlider</find>
+      <find>transi</find>
+      <find>transiti</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,12 +227,12 @@
         <option value="$PROJECT_DIR$/AB-TESTING/db.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/results.html" />
-        <option value="$PROJECT_DIR$/AB-TESTING/editor.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/modal.html" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/db.js" />
+        <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
+        <option value="$PROJECT_DIR$/AB-TESTING/editor.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/viewer.js" />
         <option value="$PROJECT_DIR$/AB-TESTING/server/reporterServer.js" />
-        <option value="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
-        <option value="$PROJECT_DIR$/AB-TESTING/server/db.js" />
       </list>
     </option>
   </component>
@@ -363,16 +391,15 @@
       <workItem from="1519211649966" duration="27990000" />
       <workItem from="1519545765491" duration="26115000" />
       <workItem from="1519633201772" duration="17352000" />
-      <workItem from="1519664705307" duration="4393000" />
+      <workItem from="1519664705307" duration="5744000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183432000" />
+    <option name="totallyTimeSpent" value="184783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1195366" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -382,7 +409,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3087844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3087844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -979,34 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StoresApp/viewerScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1019,24 +1022,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/server/dbFile.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="0" column="289" lean-forward="true" selection-start-line="0" selection-start-column="289" selection-end-line="0" selection-end-column="289" />
+        <state relative-caret-position="30">
+          <caret line="0" column="579" lean-forward="false" selection-start-line="0" selection-start-column="579" selection-end-line="0" selection-end-column="579" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="467" column="30" lean-forward="true" selection-start-line="467" selection-start-column="30" selection-end-line="467" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
           <folding>
-            <element signature="e#23#19433#0" expanded="false" />
-            <element signature="e#19551#19906#0" expanded="false" />
-            <element signature="e#19936#20109#0" expanded="false" />
-            <element signature="e#20141#22878#0" expanded="false" />
+            <element signature="e#23#66743#0" expanded="false" />
+            <element signature="e#66861#67216#0" expanded="false" />
+            <element signature="e#67246#67419#0" expanded="false" />
+            <element signature="e#67451#70188#0" expanded="false" />
+            <marker date="1519721420377" expanded="true" signature="12107:12157" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="12174:12188" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="12229:12314" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="12345:12430" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="12433:12439" ph=" " />
+            <marker date="1519721420377" expanded="true" signature="15770:15824" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="15841:15889" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="15906:15921" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="15938:15959" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="18715:18769" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="18786:18801" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="18818:18865" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="18882:18903" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="18930:18935" ph="&amp;" />
+            <marker date="1519721420377" expanded="true" signature="48736:48786" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="48803:48817" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="48858:48943" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="48974:49059" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="49062:49068" ph=" " />
+            <marker date="1519721420377" expanded="true" signature="54086:54140" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="54157:54205" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="54222:54237" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="54254:54275" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="57166:57220" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="57237:57252" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="57269:57316" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="57333:57354" ph="..." />
+            <marker date="1519721420377" expanded="true" signature="57381:57386" ph="&amp;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -45,6 +45,7 @@ async function sendImpression(variant, url) {
 }
 
 async function sendClickEvent(variant, url) {
+    console.log(variant, url);
     await fetch(serverURL + "/sendClickEvent?url=" + url + "&variant=" + variant);
 }
 

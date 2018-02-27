@@ -25,6 +25,7 @@ app.get('/sendImpression', (req, res) => {
 app.get('/sendClickEvent', (req, res) => {
     const websiteURL = req.query.url;
     const variant = req.query.variant;
+    console.log(variant, websiteURL);
     db.addClicks(websiteURL, variant);
     res.end()
 });
