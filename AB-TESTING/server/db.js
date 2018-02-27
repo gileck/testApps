@@ -34,6 +34,8 @@ module.exports = function () {
         },
         addHover(websiteURL, variant) {
             if (!data[websiteURL]) initData(websiteURL);
+            console.log(websiteURL, variant);
+            console.log(data[websiteURL][variant].hovers);
             data[websiteURL][variant].hovers++;
             updateData();
         },

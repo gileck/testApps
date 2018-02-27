@@ -31,7 +31,8 @@ app.get('/sendClickEvent', (req, res) => {
 
 app.get('/sendHoverEvent', (req, res) => {
     const websiteURL = req.query.url;
-    const variant = req.query.variant;
+    const variant = Number(req.query.variant);
+    console.log(req.query);
     db.addHover(websiteURL, variant);
     res.end()
 });

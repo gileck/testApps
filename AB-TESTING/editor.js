@@ -719,11 +719,11 @@ module.exports = function () {
             const controllerRef = await this.getController();
             const {settings} = await this.editorSDK.components.data.get('token', {componentRef: controllerRef});
             this.editorSDK.editor.openComponentPanel(null, {
-                title: "MY MODAL",
+                title: "A/B Settings",
                 componentRef,
-                initialData: {a: 1, settings, controllerRef},
+                initialData: {settings, controllerRef},
                 width: "20%",
-                height: '400px',
+                height: '350px',
                 url: "modal.html"
             })
         }

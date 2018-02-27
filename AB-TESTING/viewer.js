@@ -19,8 +19,8 @@ function pageReady($w, wix, variant, measure) {
         $w("@SiteButton0").onClick(() => sendClickEvent(VARIANT_A, websiteURL));
         $w("@SiteButton1").onClick(() => sendClickEvent(VARIANT_B, websiteURL));
     } else {
-        $w("@SiteButton0").onMouseIn(() => sendEvent(VARIANT_A, websiteURL));
-        $w("@SiteButton1").onMouseIn(() => sendEvent(VARIANT_B, websiteURL));
+        $w("@SiteButton0").onMouseIn(() => sendHoverEvent(VARIANT_A, websiteURL));
+        $w("@SiteButton1").onMouseIn(() => sendHoverEvent(VARIANT_B, websiteURL));
     }
 }
 
