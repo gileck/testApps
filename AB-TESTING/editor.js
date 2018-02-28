@@ -1454,6 +1454,10 @@ module.exports = function () {
                         visibility: 'DEV',
                         connections: {
                             "mainContainer": {
+                                behavior: {
+                                    duplicatable: false,
+                                    toggleShowOnAllPagesEnabled: false
+                                },
                                 gfpp: {
                                     desktop: {
                                         mainAction1: {
@@ -1528,7 +1532,7 @@ module.exports = function () {
         }
 
         async addComponent(compType, data) {
-            let compData = data
+            let compData = data;
             return this.editorSDK.components.add('token', {
                 componentDefinition: {
                     componentType: compType,
@@ -1577,7 +1581,15 @@ module.exports = function () {
                     await this.connect(controllerRef, children[j], typeSplit[typeSplit.length-1]+i);
                 }
             }
-            await this.editorSDK.tpa.add.application('agaregg', {appDefinitionId: '1516e29e-c67c-5630-a270-ce1dda0e9826'})
+            await this.editorSDK.tpa.add.component('agaregg', {
+                appDefinitionId: '1516e29e-c67c-5630-a270-ce1dda0e9826',
+                componentType: 'WIDGET',
+                y: 896,
+                x: 500,
+                widget: {
+                    tpaWidgetId: 'chart_with_results'
+                }
+            })
         }
 
         async addController() {
