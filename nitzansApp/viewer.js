@@ -19,56 +19,16 @@ function pageReady($w) {
     pauseButton.onClick(() => player.hide());
 }
 
-
-const publicFunctions = {
-    [addToCartWidgetId]: storesAPI,
-    [SectionPageWidgetId]: {
-        getProduct: function () {
-            return {
-                name: "Shirt",
-                price: "150$",
-                image: "http://img.michaels.com/L6/3/IOGLO/873402639/212485006/10186027_r.jpg?fit=inside|1024:1024",
-                id: "3124124"
-            };
-        },
-    },
-    fooBar: {
-        fooBarFunc: function () {
-            console.log("fooBarFunc");
-        }
-    }
-
-};
-
 function createControllers(controllerConfigs) {
-    const controllersConfigurations = controllerConfigs.map(controllerConfig => {
+    return controllerConfigs.map(controllerConfig => {
         return {
-            exports: publicFunctions[controllerConfig.type],
-            pageReady: _.noop
+            pageReady
         }
     });
-
-    console.log("controllerConfigs", controllerConfigs);
-    console.log(controllersConfigurations);
-
-    return controllersConfigurations;
 }
 
 
 module.exports = {
     initAppForPage,
     createControllers,
-    exports: {
-        subscribeToAddToCartEvent: function (callback) {
-            console.log("subscribing function to addToCart");
-            onAddedToCartSubsribers.push(callback);
-        },
-        invokeOnAddedToCartSubscribers(productId) {
-            invokeOnAddedToCartSubscribers(productId);
-        },
-        addToCart: function (id) {
-            productsInCart.push(id);
-            invokeOnAddedToCartSubscribers(id);
-        }
-    }
 };
