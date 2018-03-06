@@ -23,8 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1935c829-500b-481d-9cf3-85f327fd9472" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/viewerScript.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/nitzansApp/viewer.js" afterPath="$PROJECT_DIR$/nitzansApp/viewer.js" />
+      <change beforePath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" afterPath="$PROJECT_DIR$/AB-TESTING/server/dbFile.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,6 +86,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="reporterServer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewerScript.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/viewerScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="editor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nitzansApp/editor.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,11 +136,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nitzansApp/viewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+            <state relative-caret-position="495">
+              <caret line="33" column="2" lean-forward="false" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewerScript.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StoresApp/viewerScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -193,6 +234,7 @@
         <option value="$PROJECT_DIR$/AB-TESTING/editor.js" />
         <option value="$PROJECT_DIR$/platformApp/editor.js" />
         <option value="$PROJECT_DIR$/nitzansApp/viewer.js" />
+        <option value="$PROJECT_DIR$/viewerScript.js" />
       </list>
     </option>
   </component>
@@ -216,10 +258,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1920" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="743" />
     <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -259,7 +301,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,15 +308,11 @@
               <item name="testApps" type="b2602c69:ProjectViewProjectNode" />
               <item name="testApps" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="testApps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testApps" type="462c0819:PsiDirectoryNode" />
-              <item name="nitzansApp" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -294,17 +331,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/AB-TESTING/server" />
-      <recent name="$PROJECT_DIR$/StoresApp" />
-      <recent name="$PROJECT_DIR$/encryption" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/nitzansApp" />
       <recent name="$PROJECT_DIR$/AB-TESTING/server" />
       <recent name="$PROJECT_DIR$/AB-TESTING/credentials" />
       <recent name="$PROJECT_DIR$/AB-TESTING" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AB-TESTING/server" />
       <recent name="$PROJECT_DIR$/StoresApp" />
+      <recent name="$PROJECT_DIR$/encryption" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -340,18 +377,21 @@
       <workItem from="1519211649966" duration="27990000" />
       <workItem from="1519545765491" duration="26115000" />
       <workItem from="1519633201772" duration="17352000" />
-      <workItem from="1519664705307" duration="10851000" />
+      <workItem from="1519664705307" duration="15450000" />
+      <workItem from="1519990059907" duration="496000" />
+      <workItem from="1520251078320" duration="530000" />
+      <workItem from="1520262304379" duration="1782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189890000" />
+    <option name="totallyTimeSpent" value="197297000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="0" y="23" width="1200" height="1897" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1195366" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18405429" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -359,7 +399,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3087844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13762486" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -409,14 +449,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/platformApp/viewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/platformApp/editor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -444,16 +476,6 @@
             <element signature="e#4048#4274#0" expanded="false" />
             <element signature="e#4343#4563#0" expanded="false" />
             <element signature="e#4401#4551#0" expanded="false" />
-            <element signature="e#4608#4979#0" expanded="false" />
-            <element signature="e#4668#4967#0" expanded="false" />
-            <element signature="e#4707#4914#0" expanded="false" />
-            <element signature="e#4780#4896#0" expanded="false" />
-            <element signature="e#5049#5286#0" expanded="false" />
-            <element signature="e#5312#5950#0" expanded="false" />
-            <element signature="e#5982#6435#0" expanded="false" />
-            <element signature="e#6042#6423#0" expanded="false" />
-            <element signature="e#6081#6370#0" expanded="false" />
-            <element signature="e#6181#6352#0" expanded="false" />
             <element signature="e#6482#6822#0" expanded="false" />
             <element signature="e#6723#6810#0" expanded="false" />
             <element signature="e#6857#7013#0" expanded="false" />
@@ -476,7 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,16 +543,6 @@
             <element signature="e#4048#4274#0" expanded="false" />
             <element signature="e#4343#4563#0" expanded="false" />
             <element signature="e#4401#4551#0" expanded="false" />
-            <element signature="e#4608#4979#0" expanded="false" />
-            <element signature="e#4668#4967#0" expanded="false" />
-            <element signature="e#4707#4914#0" expanded="false" />
-            <element signature="e#4780#4896#0" expanded="false" />
-            <element signature="e#5049#5286#0" expanded="false" />
-            <element signature="e#5312#5950#0" expanded="false" />
-            <element signature="e#5982#6435#0" expanded="false" />
-            <element signature="e#6042#6423#0" expanded="false" />
-            <element signature="e#6081#6370#0" expanded="false" />
-            <element signature="e#6181#6352#0" expanded="false" />
             <element signature="e#6482#6822#0" expanded="false" />
             <element signature="e#6723#6810#0" expanded="false" />
             <element signature="e#6857#7013#0" expanded="false" />
@@ -554,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,16 +610,6 @@
             <element signature="e#4048#4274#0" expanded="false" />
             <element signature="e#4343#4563#0" expanded="false" />
             <element signature="e#4401#4551#0" expanded="false" />
-            <element signature="e#4608#4979#0" expanded="false" />
-            <element signature="e#4668#4967#0" expanded="false" />
-            <element signature="e#4707#4914#0" expanded="false" />
-            <element signature="e#4780#4896#0" expanded="false" />
-            <element signature="e#5049#5286#0" expanded="false" />
-            <element signature="e#5312#5950#0" expanded="false" />
-            <element signature="e#5982#6435#0" expanded="false" />
-            <element signature="e#6042#6423#0" expanded="false" />
-            <element signature="e#6081#6370#0" expanded="false" />
-            <element signature="e#6181#6352#0" expanded="false" />
             <element signature="e#6482#6822#0" expanded="false" />
             <element signature="e#6723#6810#0" expanded="false" />
             <element signature="e#6857#7013#0" expanded="false" />
@@ -632,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,19 +804,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StoresApp/viewerScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AB-TESTING/server/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="37" column="56" lean-forward="false" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,23 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-50">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="0" column="827" lean-forward="false" selection-start-line="0" selection-start-column="827" selection-end-line="0" selection-end-column="827" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,10 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="79" lean-forward="false" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,12 +843,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-313">
           <caret line="1536" column="38" lean-forward="true" selection-start-line="1536" selection-start-column="38" selection-end-line="1536" selection-end-column="38" />
-          <folding>
-            <element signature="e#23#66743#0" expanded="false" />
-            <element signature="e#66861#67216#0" expanded="false" />
-            <element signature="e#67246#67419#0" expanded="false" />
-            <element signature="e#67451#70395#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoresApp/viewerScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nitzansApp/viewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="2" lean-forward="false" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nitzansApp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nitzansApp/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -933,26 +923,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nitzansApp/editor.js">
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/server/reporterServer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nitzansApp/index.html">
+    <entry file="file://$PROJECT_DIR$/AB-TESTING/viewer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nitzansApp/viewer.js">
+    <entry file="file://$PROJECT_DIR$/viewerScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="15">
+          <caret line="1" column="53" lean-forward="false" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
           <folding />
         </state>
       </provider>
