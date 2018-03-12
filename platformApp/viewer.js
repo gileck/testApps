@@ -1,8 +1,10 @@
-const SectionPageWidgetId = "151513bc-27d7-a20f-acba-5a9f33fd0089";
-const addToCartWidgetId = "15155906-4f97-a407-76b1-4ea14d296d47";
 const mainWidgetId = "14ffd3c2-de00-73d6-1831-64f837bb83f6";
-const onAddedToCartSubsribers = [];
-const productsInCart = [];
+
+const playButtonClickHandlers = {};
+const pauseButtonClickHandlers = {};
+
+const playEventSubscribers = {};
+const pauseEventSubscribers = {};
 
 function initAppForPage() {
     console.log("initAppForPage");
@@ -12,46 +14,48 @@ function initAppForPage() {
 function pageReady($w) {
 
     console.log($w);
-    const player = $w("@Player");
-    const playButton = $w("@Play");
-    playButton.onClick(() => player.show());
-    const pauseButton = $w("@Pause");
-    pauseButton.onClick(() => player.hide());
+    // const playButton = $w("@Play");
+    // playButton.onClick(() => player.show());
+    // const pauseButton = $w("@Pause");
+    // pauseButton.onClick(() => player.hide());
 }
 
 
-const publicFunctions = {
-    [addToCartWidgetId]: storesAPI,
-    [SectionPageWidgetId]: {
-        getProduct: function () {
-            return {
-                name: "Shirt",
-                price: "150$",
-                image: "http://img.michaels.com/L6/3/IOGLO/873402639/212485006/10186027_r.jpg?fit=inside|1024:1024",
-                id: "3124124"
-            };
-        },
-    },
-    fooBar: {
-        fooBarFunc: function () {
-            console.log("fooBarFunc");
-        }
-    }
-
-};
 
 function createControllers(controllerConfigs) {
-    const controllersConfigurations = controllerConfigs.map(controllerConfig => {
+    console.log("controllerConfigs", controllerConfigs);
+    return controllerConfigs.map(controllerConfig => {
+        const compId = controllerConfig.config.compId;
+        console.log("compId", compId);
         return {
-            exports: publicFunctions[controllerConfig.type],
+            exports: {
+                play: function () {
+                    playButtonClickHandlers[compId]();
+                    console.log("play: " + compId);
+                },
+                pause: function () {
+                    pauseButtonClickHandlers[compId]();
+                    console.log("pause: " + compId);
+                },
+                onPlay: function (callback) {
+                    console.log("onPlay", callback);
+                    if (!playEventSubscribers[compId]) {
+                        playEventSubscribers[compId] = [];
+                    }
+                    playEventSubscribers[compId].push(callback)
+                },
+                onPause: function (callback) {
+                    console.log("onPause", callback);
+
+                    if (!pauseEventSubscribers[compId]) {
+                        pauseEventSubscribers[compId] = [];
+                    }
+                    pauseEventSubscribers[compId].push(callback)
+                }
+            },
             pageReady: _.noop
         }
     });
-
-    console.log("controllerConfigs", controllerConfigs);
-    console.log(controllersConfigurations);
-
-    return controllersConfigurations;
 }
 
 
@@ -59,16 +63,21 @@ module.exports = {
     initAppForPage,
     createControllers,
     exports: {
-        subscribeToAddToCartEvent: function (callback) {
-            console.log("subscribing function to addToCart");
-            onAddedToCartSubsribers.push(callback);
+        onPlayButtonClick: function (compId, callback) {
+            console.log("setting playButtonClickHandler", compId);
+            playButtonClickHandlers[compId] = callback;
         },
-        invokeOnAddedToCartSubscribers(productId) {
-            invokeOnAddedToCartSubscribers(productId);
+        onPauseButtonClick(compId, callback) {
+            console.log("setting pauseButtonClickHandler", compId);
+            pauseButtonClickHandlers[compId] = callback;
         },
-        addToCart: function (id) {
-            productsInCart.push(id);
-            invokeOnAddedToCartSubscribers(id);
+        fireEvent: function (compId, event) {
+            console.log(event + " was fired");
+            const events = {
+                "play": () => playEventSubscribers[compId].forEach(f => f()),
+                "pause": () => pauseEventSubscribers[compId].forEach(f => f()),
+            };
+            events[event]();
         }
     }
 };

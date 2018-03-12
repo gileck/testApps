@@ -1,0 +1,39 @@
+<!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript"
+            src="https://static.parastorage.com/services/js-sdk/1.94.0/js/wix-private.js"></script>
+
+  </head>
+  <body>
+    <h1 id="header">My TPA App 1</h1>
+
+  </body>
+</html>
+
+<script>
+
+    function openPopUp(url) {
+        Wix.openPopup(url, 300, 300);
+    }
+
+    Wix.getPublicAPI({appDefinitionId: "151ae411-99f6-2f8f-cee7-6fe5e50f7a7e"}, function (api) {
+            Wix.getComponentInfo(function (info) {
+                const compId = info.compId;
+                console.log(api);
+                api.registerOpenPopUpFunction(openPopUp);
+                api.fireEvent();
+            });
+        }, function (error) {
+            console.log(error);
+        });
+</script>
+
+
+<!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->
+
+

@@ -7,9 +7,9 @@ module.exports = function () {
 
         app = new App(_editorSDK, _appDefinitionId, pageRef);
 
-        if (options.firstInstall) {
-            await app.install();
-        }
+        // if (options.firstInstall) {
+        //     await app.install();
+        // }
 
         // let playButton = await app.getComponentByRole("Play");
         // console.log(playButton);
