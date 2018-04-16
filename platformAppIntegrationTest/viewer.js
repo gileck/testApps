@@ -15,7 +15,8 @@ function initAppForPage() {
 
 function waitForIframeToLoad() {
     return new Promise(function (resolve) {
-        tpaIsReadyFunction = resolve;
+        if (tpaIsReady) resolve();
+        else tpaIsReadyFunction = resolve;
     });
 }
 
