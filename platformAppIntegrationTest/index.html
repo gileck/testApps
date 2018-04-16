@@ -17,7 +17,8 @@
 </html>
 
 <script>
-  
+
+    let viewerScriptAPI;
 
     function openPopUp(url) {
         Wix.openPopup(url, 300, 300);
@@ -29,19 +30,23 @@
         if (event.editMode === 'preview') {
             init();
         }
-    })
+    });
+
+    setTimeout(() => viewerScriptAPI.fireEvent(), 2000);
+
+    function handleClick() {
+        viewerScriptAPI.fireEvent();
+        console.log("Button Clicked");
+    }
 
     function init() {
         Wix.getPublicAPI({appDefinitionId: "151ae411-99f6-2f8f-cee7-6fe5e50f7a7e"}, function (api) {
+            viewerScriptAPI = api;
+            api.registerOpenPopUpFunction(openPopUp);
+            api.tpaIsReady();
             Wix.getComponentInfo(function (info) {
                 const compId = info.compId;
                 console.log(api);
-                api.registerOpenPopUpFunction(openPopUp);
-                function handleClick() {
-                    api.fireEvent();
-                    console.log("Button Clicked");
-                }
-                api.tpaIsReady();
             });
         }, function (error) {
             console.log(error);
