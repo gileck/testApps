@@ -32,7 +32,6 @@
         }
     });
 
-    setTimeout(() => viewerScriptAPI.fireEvent(), 2000);
 
     function handleClick() {
         viewerScriptAPI.fireEvent();
@@ -41,6 +40,7 @@
 
     function init() {
         Wix.getPublicAPI({appDefinitionId: "151ae411-99f6-2f8f-cee7-6fe5e50f7a7e"}, function (api) {
+            setTimeout(() => viewerScriptAPI.fireEvent(), 1000);
             viewerScriptAPI = api;
             api.registerOpenPopUpFunction(openPopUp);
             api.tpaIsReady();
