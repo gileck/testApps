@@ -12,12 +12,18 @@ function initAppForPage() {
     console.log("initAppForPage");
 }
 
+function waitForIframeToLoad() {
+    return new Promise(function (resolve) {
+        tpaIsReadyFunction = resolve;
+    });
+}
 
 const exportFunctions = {
     [mainWidgetId]: {
-        openPopUp: function (url) {
+        openPopUp: async function (url) {
+            await waitForIframeToLoad();
             if (_.isFunction(openPopUpFunction)) {
-                openPopUpFunction(url);
+                return openPopUpFunction(url);
             } else {
                 console.log("Error");
             }
@@ -28,11 +34,6 @@ const exportFunctions = {
         onEvent: function (callback) {
             subscribers.push(callback);
         },
-        waitForTPA: function () {
-            return new Promise(function (resolve) {
-                tpaIsReadyFunction = resolve;
-            });
-        }
     },
     [WidgetId2]: {
         openURL: function () {
