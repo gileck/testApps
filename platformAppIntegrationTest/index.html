@@ -11,26 +11,43 @@
   </head>
   <body>
     <h1 id="header">My TPA App 1</h1>
+    <button onclick="handleClick">CLICK HERE</button>
 
   </body>
 </html>
 
 <script>
+  
 
     function openPopUp(url) {
         Wix.openPopup(url, 300, 300);
     }
 
-    Wix.getPublicAPI({appDefinitionId: "151ae411-99f6-2f8f-cee7-6fe5e50f7a7e"}, function (api) {
+    init();
+    Wix.addEventListener(Wix.Events.EDIT_MODE_CHANGE, function(event) {
+        console.log("Edit mode changed to " + event.editMode);
+        if (event.editMode === 'preview') {
+            init();
+        }
+    })
+
+    function init() {
+        Wix.getPublicAPI({appDefinitionId: "151ae411-99f6-2f8f-cee7-6fe5e50f7a7e"}, function (api) {
             Wix.getComponentInfo(function (info) {
                 const compId = info.compId;
                 console.log(api);
                 api.registerOpenPopUpFunction(openPopUp);
-                api.fireEvent();
+                function handleClick() {
+                    api.fireEvent();
+                    console.log("Button Clicked");
+                }
+                api.tpaIsReady();
             });
         }, function (error) {
             console.log(error);
         });
+    }
+
 </script>
 
 

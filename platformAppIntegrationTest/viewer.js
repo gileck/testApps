@@ -1,47 +1,71 @@
-const mainWidgetId = "14ffd3c2-de00-73d6-1831-64f837bb83f6";
+const mainWidgetId = "151ae420-5772-cb46-d55a-f804d84119db";
+const WidgetId2 = "14ffd3c2-de00-73d6-1831-64f837bb83f7";
+
+
 // const _ = require("lodash");
 
-let openPopUp;
+let openPopUpFunction;
 const subscribers = [];
+let tpaIsReadyFunction;
 
 function initAppForPage() {
     console.log("initAppForPage");
 }
 
 
+const exportFunctions = {
+    [mainWidgetId]: {
+        openPopUp: function (url) {
+            if (_.isFunction(openPopUpFunction)) {
+                openPopUpFunction(url);
+            } else {
+                console.log("Error");
+            }
+        },
+        onButtonClicked: function (callback) {
+            subscribers.push(callback);
+        },
+        onEvent: function (callback) {
+            subscribers.push(callback);
+        },
+        waitForTPA: function () {
+            return new Promise(function (resolve) {
+                tpaIsReadyFunction = resolve;
+            });
+        }
+    },
+    [WidgetId2]: {
+        openURL: function () {
+            //
+        }
+    }
+};
+
+
 function createControllers(controllerConfigs) {
-    console.log("controllerConfigs", controllerConfigs);
-    return controllerConfigs.map(controllerConfig => {
+    const array = controllerConfigs.map(controllerConfig => {
         const compId = controllerConfig.config.compId;
-        console.log("compId", compId);
         return {
-            exports: {
-                openPopUp: function (url) {
-                    if (_.isFunction(openPopUp)) {
-                        openPopUp(url);
-                    } else {
-                        console.log("Error");
-                    }
-                },
-                onEvent: function (callback) {
-                    subscribers.push(callback);
-                }
-            },
-            pageReady: _.noop
+            exports: exportFunctions[controllerConfig.type],
+            pageReady: function () {}
         }
     });
+    return array;
 }
 
 
 module.exports = {
-    initAppForPage,
-    createControllers,
+    initAppForPage: initAppForPage,
+    createControllers: createControllers,
     exports: {
         registerOpenPopUpFunction: function (func) {
-            openPopUp = func
+            openPopUpFunction = func
         },
         fireEvent() {
             subscribers.forEach(fn => fn());
+        },
+        tpaIsReady() {
+            tpaIsReadyFunction();
         }
         // fireEvent: function (compId, event) {
         //     console.log(event + " was fired");
