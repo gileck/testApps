@@ -6,7 +6,8 @@ const WidgetId2 = "14ffd3c2-de00-73d6-1831-64f837bb83f7";
 
 let openPopUpFunction;
 const subscribers = [];
-let tpaIsReadyFunction;
+
+let tpaIsReadyFunction, tpaIsReady = false;
 
 function initAppForPage() {
     console.log("initAppForPage");
@@ -66,7 +67,11 @@ module.exports = {
             subscribers.forEach(fn => fn());
         },
         tpaIsReady() {
-            tpaIsReadyFunction();
+            if (_.isFunction(tpaIsReadyFunction)) {
+                tpaIsReadyFunction();
+            } else {
+                tpaIsReady = true;
+            }
         }
         // fireEvent: function (compId, event) {
         //     console.log(event + " was fired");
