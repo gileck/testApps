@@ -1,4 +1,8 @@
 <!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->
+<!-- https://static.parastorage.com/services/js-sdk/ecf739daaca3e92d065e4d43ed2217a7c95e383d/js/wix-private.js -->
+<!-- http://localhost:5001/build/Wix.js -->
+
+<!-- https://static.parastorage.com/services/js-sdk/1.96.0/js/Wix.js -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,55 +10,60 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript"
-            src="https://static.parastorage.com/services/js-sdk/1.94.0/js/wix-private.js"></script>
+src="https://static.parastorage.com/services/js-sdk/1.96.0/js/Wix.js"></script>
+
 
   </head>
   <body>
+    TPA
     <!--<button onclick="openModal()">OPEN ME</button>-->
-    <h1 id="header">My TPA App</h1>
-    <video id="video" style="width:100%"
-           src="https://pmd.cdn.turner.com/nba/big/nba/wsc/2017/11/23/d603c1c6-738d-66fd-2cc3-0111e03325b8.nba_1530876_1920x1080_5904.mp4"
-           controls></video>
+    <!--<h1 id="header">My TPA App</h1>-->
+    <!--<video id="video" style="width:100%"-->
+    <!--src="https://pmd.cdn.turner.com/nba/big/nba/wsc/2017/11/23/d603c1c6-738d-66fd-2cc3-0111e03325b8.nba_1530876_1920x1080_5904.mp4"-->
+    <!--controls></video>-->
+
+
 
   </body>
 </html>
 
 <script>
-    const video = document.getElementById("video");
+  
+    // const video = document.getElementById("video");
+    //
+    //
+    // function play() {
+    //     video.play();
+    // }
+    //
+    // function pause() {
+    //     video.pause();
+    // }
+    //
+    // Wix.addEventListener(Wix.Events.EDIT_MODE_CHANGE, (data) => {
+    //     console.log(data);
+    //     if (data.editMode === "preview") {
+    //         Wix.getPublicAPI({appDefinitionId: "14ffd3ac-6fde-4a95-1f3a-e7a0a366fa24"}, function (api) {
+    //           console.log(api);
+    //           api.setGetProductFunction(getProduct);
+    //         }, function (error) {
+    //             console.log(error);
+    //         });
+    //     }
+    // })
 
+  //
+  // Wix.OnEvent()
 
-    function play() {
-        video.play();
-    }
+    Wix.addEventListener(Wix.Events.EDITOR_EVENT, (event) => {
+        console.log(event);
+        console.log("YAYAYAYAYYA");
+    });
 
-    function pause() {
-        video.pause();
-    }
-
-    Wix.getPublicAPI({appDefinitionId: "14ffd3ac-6fde-4a95-1f3a-e7a0a366fa24"}, function (api) {
-            Wix.getComponentInfo(function (info) {
-                const compId = info.compId;
-
-                console.log(api);
-
-                video.onplay = function () {
-                    api.fireEvent(compId, "play");
-                    console.log("The video has started to play");
-                };
-
-                video.onpause = function () {
-                    api.fireEvent(compId, "pause");
-                    console.log("The video has paused");
-                };
-
-
-                api.onPlayButtonClick(compId, play);
-                api.onPauseButtonClick(compId, pause);
-            });
-        }, function (error) {
-            console.log(error);
-        });
 </script>
+
+<style>
+</style>
 
 
 <!-- CODE IN PRODUCTION TESTS - DO NOT CHANGE -->

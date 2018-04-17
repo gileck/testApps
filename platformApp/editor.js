@@ -1,40 +1,18 @@
 module.exports = function () {
     let app;
+    const VIDEO_COMP_TYPE = 'wysiwyg.viewer.components.Video';
+    const BUTTON_COMP_TYPE = 'wysiwyg.viewer.components.SiteButton';
+    const CONTAINER_BOX_COMP_TYPE = 'mobile.core.components.Container';
 
     async function editorReady(_editorSDK, _appDefinitionId, options) {
+        console.log("editorReady");
         console.log(_editorSDK);
+
+        _editorSDK.editor.setAppAPI("token", {a: () => {}});
+
         const pageRef = await _editorSDK.pages.getCurrent();
-
         app = new App(_editorSDK, _appDefinitionId, pageRef);
-
-        // if (options.firstInstall) {
-        //     await app.install();
-        // }
-
-        // let playButton = await app.getComponentByRole("Play");
-        // console.log(playButton);
-        // await app.updateConnection(playButton.componentRef, "Play", {a: 1});
-        // playButton = await app.getComponentByRole("Play");
-        // console.log(playButton);
-        // await app.updateConnection(playButton.componentRef, "Play", {b: 2});
-        // playButton = await app.getComponentByRole("Play");
-        // console.log(playButton);
-        // await app.addConnectedComponent('mobile.core.components.Container', 'Box', {
-        //     applicationId: app.appDefinitionId,
-        //     type: "AppController",
-        //     controllerType: 'BoxControllerType',
-        //     name: 'BoxContainerController'
-        // });
-        // await app.addConnectedComponent('wysiwyg.viewer.components.VectorImage', 'shape', {
-        //     svgId: "svgshape.v2.Svg_08e9266742a9484b90115d29bbfa9360",
-        //     type: "VectorImage"
-        // });
-        //
-        // await app.addConnectedComponent('wysiwyg.viewer.components.VectorImage', 'fox', {
-        //     svgId: "4431a8dffbcc4169b10bf364fee0b7f2.svg",
-        //     title: "Fox",
-        //     type: "VectorImage"
-        // });
+        if (options.firstInstall) await app.install2();
     }
 
     async function onEvent(event) {
@@ -51,6 +29,15 @@ module.exports = function () {
                     default: {
                         visibility: 'DEV',
                         connections: {
+                            "Box": {
+                                "gfpp": {
+                                    desktop: {
+                                        mainAction1: {
+                                            label: "MAIN"
+                                        }
+                                    }
+                                }
+                            },
                             "strip": {
                                 "behavior": {
                                     "resizable": true,
@@ -116,7 +103,7 @@ module.exports = function () {
             });
         }
 
-        async addComponent(compType, data) {
+        async addComponent(compType, data, root) {
             return this.editorSDK.components.add('token', {
                 componentDefinition: {
                     componentType: compType,
@@ -129,6 +116,30 @@ module.exports = function () {
             });
         }
 
+        async addComponentInContainer(compType, root, data, layout) {
+            return this.editorSDK.components.add('token', {
+                componentDefinition: {
+                    componentType: compType,
+                    data: {
+                        // applicationId: this.appDefinitionId,
+                        ...data
+                    },
+                    layout
+                },
+                pageRef: root
+            });
+        }
+
+        async addContainerBoxInController(compType, root, layout) {
+            return this.editorSDK.components.add('token', {
+                componentDefinition: {
+                    componentType: compType,
+                    layout
+                },
+                pageRef: root
+            });
+        }
+
         async addConnectedComponent(componentType, role, data = {}) {
             const compRef = await this.addComponent(componentType, data);
             const controllerRef = await this.getController();
@@ -136,24 +147,62 @@ module.exports = function () {
             return compRef;
         }
 
-        async install() {
-            await this.addController();
-            await this.addConnectedComponent('wysiwyg.viewer.components.Video', 'Player', {videoId: "WWpQK3nQclU"});
-            const playButtonRef = await this.addConnectedComponent('wysiwyg.viewer.components.SiteButton', 'Play');
-            await this.editorSDK.components.data.update(null, {componentRef: playButtonRef, data: {label: 'Play'}});
-            const pauseButtonRef = await this.addConnectedComponent('wysiwyg.viewer.components.SiteButton', 'Pause');
-            await this.editorSDK.components.data.update(null, {componentRef: pauseButtonRef, data: {label: 'Pause'}});
+        async install2() {
+            // await this.addControllerComponent("c1");
+            // await this.removeTPAWidget("14ffd3c2-de00-73d6-1831-64f837bb83f6");
         }
 
-        async addController() {
-            return this.editorSDK.components.add('token', {
+        async install() {
+            const controller = await this.addController({height: 290, width: 392, x: 208, y: 65});
+
+            const containerBox = await this.addContainerBoxInController(CONTAINER_BOX_COMP_TYPE, controller,
+                {x: 29, y: 14, height: 259, width: 324});
+
+            const playButtonRef = await this.addComponentInContainer(BUTTON_COMP_TYPE, containerBox, {},
+                {x: 18, y: 149});
+
+            const pauseButtonRef = await this.addComponentInContainer(BUTTON_COMP_TYPE, containerBox, {},
+                {x: 194, y: 149});
+
+            await this.editorSDK.components.data.update(null, {componentRef: pauseButtonRef, data: {label: 'Pause'}});
+            await this.editorSDK.components.data.update(null, {componentRef: playButtonRef, data: {label: 'Play'}});
+
+            await this.connect(controller, playButtonRef, "Play");
+            await this.connect(controller, pauseButtonRef, "Pause");
+            await this.connect(controller, containerBox, "Box");
+
+            await this.removeTPAWidget("14ffd3c2-de00-73d6-1831-64f837bb83f6");
+            // await this.addConnectedComponent(VIDEO_COMP_TYPE, 'Player', {videoId: "WWpQK3nQclU"});
+            // const playButtonRef = await this.addConnectedComponent(BUTTON_COMP_TYPE, 'Play');
+            // await this.editorSDK.components.data.update(null, {componentRef: playButtonRef, data: {label: 'Play'}});
+            // const pauseButtonRef = await this.addConnectedComponent(BUTTON_COMP_TYPE, 'Pause');
+            // await this.editorSDK.components.data.update(null, {componentRef: pauseButtonRef, data: {label: 'Pause'}});
+        }
+
+        async addControllerComponent(type) {
+            await this.editorSDK.components.add('token', {
                 componentDefinition: {
                     componentType: 'platform.components.AppController',
                     data: {
                         applicationId: this.appDefinitionId,
+                        controllerType: type,
+                        name: 'Name'
+                    },
+                },
+                pageRef: this.pageRef
+            });
+        }
+
+        async addController(layout) {
+            return this.editorSDK.components.add('token', {
+                componentDefinition: {
+                    componentType: 'platform.components.AppWidget',
+                    data: {
+                        applicationId: this.appDefinitionId,
                         controllerType: 'fooBar',
                         name: 'Item'
-                    }
+                    },
+                    layout
                 },
                 pageRef: this.pageRef
             });
@@ -182,11 +231,11 @@ module.exports = function () {
 
         }
 
-        async removeTPAWidget() {
+        async removeTPAWidget(widgetId) {
             const componentsRefs = await this.editorSDK.components.getAllComponents();
             const componentsData = await Promise.all(componentsRefs.map(compRef => this.editorSDK.components.data.get(null, {componentRef: compRef})));
             const components = componentsData.map((comp, index) => Object.assign({}, comp, {componentRef: componentsRefs[index]}));
-            const widget = await components.find(c => c.applicationId === "1336");
+            const widget = await components.find(c => c.widgetId === widgetId);
             if (!widget) return;
             this.editorSDK.components.remove(null, {componentRef: widget.componentRef});
         }
@@ -209,7 +258,7 @@ module.exports = function () {
             const controller = components.find(c => c.type === "AppController");
             return controller.componentRef;
         }
-        
+
         async getComponents() {
             const controllerRef = await this.getController();
             const connectedComponents = await this.editorSDK.controllers.getControllerConnections(null, {controllerRef});
@@ -248,5 +297,22 @@ module.exports = function () {
         getAppManifest
     }
 }();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
