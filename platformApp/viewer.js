@@ -1,5 +1,4 @@
 const mainWidgetId = "14ffd3c2-de00-73d6-1831-64f837bb83f6";
-console.log("HERE");
 const playButtonClickHandlers = {};
 const pauseButtonClickHandlers = {};
 
@@ -25,53 +24,12 @@ function pageReady($w, wix) {
     // pauseButton.onClick(() => player.hide());
 }
 
+function defaultCreateControllers(controllerConfigs) {
+    return controllerConfigs.map(controllerConfig => ({
+        pageReady: _.noop,
+        exports: {}
+    }));
 
-let _resolve, _getProduct;
-function createController3(controllerConfigs) {
-    let Wix;
-    // const viewMode = Wix.window.viewMode;
-    // console.log(viewMode);
-    return [{
-        pageReady: pageReady,
-        exports: {
-            getProduct: function () {
-                return new Promise(function(resolve, reject) {
-                    if (_.isFunction(_getProduct)) {
-                        resolve(_getProduct)
-                    } else {
-                        _resolve = resolve;
-                    }
-                });
-            }
-        }
-    }];
-}
-
-
-function createController2(controllerConfigs) {
-    return controllerConfigs.map(controllerConfig => {
-           if (controllerConfig.type === "c1") {
-                return Promise.resolve({
-                    exports: {
-                        get: async function () {
-                            console.log("here");
-
-                            await fetch('/')
-                        }
-                    },
-                    pageReady: _.noop
-                });
-           }
-           if (controllerConfig.type === "fooBar2") {
-               return Promise.reject();
-           }
-           return Promise.resolve({
-               exports: {
-
-               },
-               pageReady: _.noop
-           })
-    });
 }
 
 
@@ -114,7 +72,7 @@ function createControllers(controllerConfigs) {
 
 module.exports = {
     initAppForPage,
-    createControllers: createController3,
+    createControllers: defaultCreateControllers,
     exports: {
         setGetProductFunction: function (fn) {
             if (_.isFunction(_resolve)) {
@@ -139,5 +97,17 @@ module.exports = {
             };
             events[event]();
         }
-    }
+    },
+
 };
+
+
+
+/////////
+
+
+
+
+
+
+

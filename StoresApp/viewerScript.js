@@ -1,5 +1,6 @@
 // const SectionPageWidgetId = "151513bc-27d7-a20f-acba-5a9f33fd0089";
 const addToCartWidgetId = "1515abc3-aa95-1e7d-f959-3c8eb157c8c3";
+const storesCartWidgetId = "1380bbc4-1485-9d44-4616-92e36b1ead6b";
 const serverURL = "https://localhost:3000";
 const storesLogic = getStoresLogic();
 const storesAPI = {
@@ -12,7 +13,8 @@ const storesAPI = {
     getItemsInCartCount: storesLogic.getItemsInCartCount
 };
 const publicFunctions = {
-    [addToCartWidgetId]: storesAPI
+    [addToCartWidgetId]: storesAPI,
+    [storesCartWidgetId]: storesAPI
 };
 
 function initAppForPage() {
@@ -20,6 +22,7 @@ function initAppForPage() {
 }
 
 function createControllers(controllerConfigs) {
+    //debugger
     const controllersConfigurations = controllerConfigs.map(controllerConfig => {
         return {
             exports: publicFunctions[controllerConfig.type],
