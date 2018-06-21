@@ -4,6 +4,8 @@ module.exports = {
         console.log("Before Installing WixCode...");
         editorSDK.document.application.install('token', {appDefinitionId: WIX_CODE_APP_DEF_ID})
             .then(() => console.log("WIXCODE INSTALLED"))
+            .then(() => editorSDK.vfs.writeFile('token', { path: 'backend/some-file.js', '// js content' }))
+            .then(() => console.log('WROTE A BACKEND FILE'))
             .catch(e => console.log("ERROR: ", e));
     },
     onEvent: () => {},
