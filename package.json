@@ -8,7 +8,9 @@
     "express": "^4.16.2",
     "cors": "^2.8.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.28.11"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

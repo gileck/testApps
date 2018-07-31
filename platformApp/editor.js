@@ -65,11 +65,12 @@ module.exports = function () {
 
     async function editorReady(_editorSDK, _appDefinitionId, options) {
         const pageRef = await _editorSDK.pages.getCurrent();
-        app = new App(_editorSDK, _appDefinitionId, pageRef);
+        const appInfo = await _editorSDK.document.tpa.app.getDataByAppDefId('', _appDefinitionId);
+        app = new App(_editorSDK, _appDefinitionId, pageRef, appInfo.applicationId);
         console.log(_editorSDK);
-
-        const boxId = "comp-jhqa96tj";
-        const buttonId = "comp-jhqa9mb3";
+        //
+        // const boxId = "comp-jhqa96tj";
+        // const buttonId = "comp-jhqa9mb3";
 
         // const boxRef = await _editorSDK.document.components.getById("",{id: boxId});
         // const buttonRef = await _editorSDK.document.components.getById("",{id: buttonId});
@@ -79,12 +80,20 @@ module.exports = function () {
         // console.log(properties);
 
         // if (options.firstInstall) await app.installAppWidget();
-        // if (options.firstInstall) await app.install();
-
-        // setTimeout(() => _editorSDK.document.save(), 5000)
-
-        // const ids = await _editorSDK.document.components.getAllComponents();
-        // const all = await Promise.all(ids.map(c => _editorSDK.document.components.data.get("a",{componentRef: c})));
+        // if (options.firstInstall) await app.install2();
+        // if (options.firstInstall) await app.install2();
+        await app.addControllerComponent('c1');
+        // await _editorSDK.document.components.add('token', {
+        //     componentDefinition: {
+        //         componentType: 'platform.components.AppController',
+        //         data: {
+        //             applicationId: appInfo.applicationId.toString(),
+        //             controllerType: 'c2',
+        //             name: 'Name'
+        //         }
+        //     },
+        //     pageRef: await _editorSDK.document.siteSegments.getSiteStructure('token')
+        // });
     }
 
     async function onEvent(event) {
@@ -159,7 +168,7 @@ module.exports = function () {
     }
 
     class App {
-        constructor(editorSDK, appDefinitionId, pageRef) {
+        constructor(editorSDK, appDefinitionId, pageRef, applicationId) {
             this.editorSDK = editorSDK;
             this.appDefinitionId = appDefinitionId;
             this.pageRef = pageRef;
@@ -168,8 +177,8 @@ module.exports = function () {
                 "componentDeleted": this.onComponentDeleted,
                 "controllerAdded": this.onControllerAdded,
                 "controllerSettingsButtonClicked": this.onControllerSettingsButtonClicked
-
             }
+            this.applicationId = applicationId;
         }
 
         async connect(controllerRef, componentRef, role) {
@@ -228,8 +237,25 @@ module.exports = function () {
 
         async install2() {
 
-            await this.addControllerComponent("c1");
-            await this.removeTPAWidget("14ffd3c2-de00-73d6-1831-64f837bb83f6");
+            const controllerRef = await this.addControllerComponent("c1");
+            const publish = await this.addComponentInContainer(BUTTON_COMP_TYPE, this.pageRef,
+                {label: "Publish"},
+                {x: 200, y: 20, width: 100, height: 30});
+            const subscribe = await this.addComponentInContainer(BUTTON_COMP_TYPE, this.pageRef,
+                {label: "Subscribe"},
+                {x: 200, y: 80, width: 100, height: 30});
+            const publish2 = await this.addComponentInContainer(BUTTON_COMP_TYPE, this.pageRef,
+                {label: "Publish2"},
+                {x: 200, y: 120, width: 100, height: 30});
+            const subscribe2 = await this.addComponentInContainer(BUTTON_COMP_TYPE, this.pageRef,
+                {label: "Subscribe2"},
+                {x: 200, y: 160, width: 100, height: 30});
+
+            await this.connect(controllerRef, publish, "publish");
+            await this.connect(controllerRef, subscribe, "subscribe");
+            await this.connect(controllerRef, publish2, "publish2");
+            await this.connect(controllerRef, subscribe2, "subscribe2");
+            // await this.removeTPAWidget("14ffd3c2-de00-73d6-1831-64f837bb83f6");
         }
 
         async install() {
@@ -286,11 +312,11 @@ module.exports = function () {
         };
 
         async addControllerComponent(type) {
-            await this.editorSDK.components.add('token', {
+            return this.editorSDK.components.add('token', {
                 componentDefinition: {
                     componentType: 'platform.components.AppController',
                     data: {
-                        applicationId: this.appDefinitionId,
+                        applicationId: this.applicationId.toString(),
                         controllerType: type,
                         name: 'Name'
                     },
@@ -304,7 +330,7 @@ module.exports = function () {
                 componentDefinition: {
                     componentType: 'platform.components.' + type,
                     data: {
-                        applicationId: this.appDefinitionId,
+                        applicationId: this.applicationId,
                         controllerType: 'fooBar',
                         name: 'Item'
                     },

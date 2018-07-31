@@ -10,23 +10,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript"
-src="https://static.parastorage.com/services/js-sdk/1.96.0/js/Wix.js"></script>
+            src="https://static.parastorage.com/services/js-sdk/1.95.0/js/wix-private.js"></script>
 
 
   </head>
-  <body>
-    <video id="video" style="width:100%"
-    src="https://pmd.cdn.turner.com/nba/big/nba/wsc/2017/11/23/d603c1c6-738d-66fd-2cc3-0111e03325b8.nba_1530876_1920x1080_5904.mp4"
-    controls></video>
+  <body style="border: 1px solid gray; padding: 10px">
+    HI 123
+    <!--<video id="video" style="width:100%"-->
+    <!--src="https://pmd.cdn.turner.com/nba/big/nba/wsc/2017/11/23/d603c1c6-738d-66fd-2cc3-0111e03325b8.nba_1530876_1920x1080_5904.mp4"-->
+    <!--controls></video>-->
+    <!--<button onclick="publish()"> PUBLISH SOME_EVENT </button>-->
+    <!--<button onclick="subscribe()"> SUBSCRIBE TO SOME_EVENT </button>-->
+    <!--<button onclick="unsubscribe()"> UNSUBSCRIBE TO SOME_EVENT </button>-->
+    <!--</br>-->
+    <!--<b>With persistence</b>-->
+    <!--<button onclick="publish(true)"> PUBLISH SOME_EVENT </button>-->
+    <!--<button onclick="subscribe(true)"> SUBSCRIBE TO SOME_EVENT </button>-->
 <!---->
+
+    <div id="a">
+
+    </div>
+    <!---->
 
 
   </body>
 </html>
 
 <script>
-  
+
+  /*
     const video = document.getElementById("video");
+    let counter = 0;
 
 
     function play() {
@@ -37,7 +52,55 @@ src="https://static.parastorage.com/services/js-sdk/1.96.0/js/Wix.js"></script>
         video.pause();
     }
 
-    // Wix.addEventListener(Wix.Events.EDIT_MODE_CHANGE, (data) => {
+    const ids = [];
+
+    function publish(isPersistence = false) {
+        Wix.PubSub.publish("SOME_EVENT", {a: 3}, isPersistence);
+    }
+
+    function subscribe(isPersistence = false) {
+        const id = Wix.PubSub.subscribe("SOME_EVENT", (data) => {
+            console.log("PUBLISHED (in iframe)", data);
+            counter++;
+            document.getElementById('a').innerText = counter;
+        }, isPersistence);
+        ids.push(id);
+    }
+
+    function unsubscribe() {
+        ids.forEach(id => Wix.PubSub.unsubscribe("SOME_EVENT", id));
+    }
+
+*/
+
+  const elem = document.getElementById('a');
+
+  var compId = Wix.Utils.getCompId();
+  
+  console.log({compId});
+
+  Wix.PubSub.subscribe("setItem_" + compId , ({data}) => {
+      console.log({data});
+      // elem.innerText = data;
+  }, true);
+
+  /*
+  Wix.PubSub.subscribe("addToCart" , ({data}) => {
+      console.log(data, "data");
+      const id = data.id;
+      console.log(id, "id");
+
+
+      setTimeout(() => {
+          console.log("WORKKKKK");
+          Wix.PubSub.publish('addToCartDone' , {result: "OK"});
+
+          elem.innerText += id + " ADDED  | "
+      }, 1000);
+
+  });
+  */
+    // Wix.PubSub.publish(Wix.Events.EDIT_MODE_CHANGE, (data) => {
     //     console.log(data);
     //     if (data.editMode === "preview") {
     //         Wix.getPublicAPI({appDefinitionId: "14ffd3ac-6fde-4a95-1f3a-e7a0a366fa24"}, function (api) {
@@ -49,13 +112,16 @@ src="https://static.parastorage.com/services/js-sdk/1.96.0/js/Wix.js"></script>
     //     }
     // })
 
-  //
-  // Wix.OnEvent()
-  //
-  //   Wix.addEventListener(Wix.Events.EDITOR_EVENT, (event) => {
-  //       console.log(event);
-  //       console.log("YAYAYAYAYYA");
-  //   });
+
+
+
+    //
+    // Wix.OnEvent()
+    //
+    //   Wix.addEventListener(Wix.Events.EDITOR_EVENT, (event) => {
+    //       console.log(event);
+    //       console.log("YAYAYAYAYYA");
+    //   });
 
 </script>
 
