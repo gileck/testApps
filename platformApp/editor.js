@@ -82,7 +82,7 @@ module.exports = function () {
         // if (options.firstInstall) await app.installAppWidget();
         // if (options.firstInstall) await app.install2();
         // if (options.firstInstall) await app.install2();
-        await app.addControllerComponent('c1');
+        //await app.addControllerComponent('c1');
         // await _editorSDK.document.components.add('token', {
         //     componentDefinition: {
         //         componentType: 'platform.components.AppController',
