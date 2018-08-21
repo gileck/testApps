@@ -1,6 +1,10 @@
 module.exports = function () {
     let experiments = {};
 
+    /**
+     * @param Element - The SDK Element class to extend the return class with.
+     * @returns class - The class will be used to create the instance that is returned from the $w("") function.
+     */
     const createApiClass = function (Element) {
         return class API extends Element {
             constructor($w, args) {
