@@ -18,7 +18,6 @@ module.exports = function () {
             }
 
             get Items() {
-                console.log({experiments});
                 if (experiments['Experiment1']) {
                     return "123456";
                 } else {
