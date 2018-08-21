@@ -10,56 +10,113 @@ module.exports = function () {
     let applicationId;
     let locale = wix.window.locale;  // "en"
     let pubsub;
+    let experiments = {};
 
-    function initAppForPage(appParams, appUtils, Wix, SDK) {
-        pubsub = appUtils.pubSub;
+    const createApiClass = function (Element) {
+        return class API extends Element {
+            constructor($w, args) {
+                super(...args);
+                this.$w = $w;
+            }
 
-        // console.log("SDK", SDK);
+            set label(label) {
+                const button = this.$w("@button1");
+                button.label = label;
+            }
 
-        // console.log("Wix", Wix);
-
-        // console.log(appUtils);
-        // applicationId = appParams.appInstanceId;
-        // publish = appUtils.pubSub.publish;
-        // subscribe = appUtils.pubSub.subscribe;
-        // unsubscribe = appUtils.pubSub.unsubscribe;
-    }
-
-    function pageReady($w) {
-        // $w("@publish").onClick(() => publish('SOME_EVENT', {app: applicationId}));
-        // $w("@publish2").onClick(() => publish('SOME_EVENT', {app: applicationId}, true));
-        // $w("@subscribe").onClick(() => subscribe("SOME_EVENT", (data) => console.log("PUBLISHED!",  data)));
-        // $w("@Unsubscribe").onClick(() => unsubscribe("SOME_EVENT"));
-        // $w("@subscribe2").onClick(() => subscribe("SOME_EVENT", (data) => console.log("PUBLISHED!", data), true));
-
-    }
-
-    function pageReady2($w) {
-        console.log("HA");
-        $w("@Button").label = "buttonFromApp";
-        // return Promise.reject();
-    }
-
-    const emptyController = {
-        pageReady: _.noop,
-        exports: {}
+            get Items() {
+                console.log({experiments});
+                if (experiments['Experiment1']) {
+                    return "123456";
+                } else {
+                    return "567890";
+                }
+            }
+        }
     };
 
-    const controllersByType =  {
-        'c1': {
-            pageReady: $w => {
-                $w("@button1").label = "c1";
+    async function initAppForPage(appParams, appUtils, Wix, SDK) {
+        pubsub = appUtils.pubSub;
+        console.log("start initAppForPage");
+
+        experiments = await getExperiments();
+        console.log("initAppForPage");
+        return;
+    }
+
+    function getExperiments() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve({
+                    'newAPI': true,
+                    'Experiment1': false,
+                    'Experiment2': false,
+                    'Experiment3': false
+                })
+            }, 100);
+        })
+    }
+
+    class MyGreatAPI {
+    }
+
+    class MyNewAPIUnderDev {
+        constructor($w, compInfo) {
+            this.$w = $w;
+        }
+
+        set label(label) {
+            const button = this.$w("@button1");
+            button.label = label
+        }
+
+        get Items() {
+            console.log({experiments});
+            if (experiments['Experiment1']) {
+                return "123456";
+            } else {
+                return "567890";
+            }
+        }
+
+        set color(color) {
+            const button = this.$w("@button1");
+            button.style.backgroundColor = color
+        }
+    }
+
+    function controller() {
+        console.log("controller()");
+        console.log("experiments['newAPI']", experiments['newAPI']);
+        return {
+            pageReady: () => {
+                return Promise.resolve()
             },
-            exports: {}
-        },
-        'c2': {
+            // apiClass: MyGreatAPI
+            apiClass: createApiClass
+        }
+    }
+
+    const emptyController = Promise.resolve({
+        pageReady: _.noop,
+        exports: {}
+    });
+
+    const controllersByType = {
+        'c1': Promise.resolve(controller()),
+        'c2': Promise.resolve({
+            pageReady: function ($w) {
+                $w("@button2").label = new Date().toLocaleString();
+            }
+        }),
+        'c3': Promise.resolve({
             pageReady: $w => {
-                $w("@button2").label = "c2";
+                $w("@button3").label = 'data from c3'
+            }
+        }),
+        '14ffd3c2-de00-73d6-1831-64f837bb83f6': Promise.resolve({
+            pageReady: () => {
             },
-            exports: {}
-        },
-        '14ffd3c2-de00-73d6-1831-64f837bb83f6': {
-            pageReady: () => {},
             exports: {
                 setItems: function (items) {
                     console.log({items});
@@ -67,7 +124,7 @@ module.exports = function () {
                     pubsub.publish('setItem_' + compId, {items}, true);
                 }
             }
-        }
+        })
 
     };
 
@@ -75,8 +132,10 @@ module.exports = function () {
         console.log("controllerConfigs", controllerConfigs);
         return controllerConfigs.map(function (config) {
             if (controllersByType[config.type]) {
-                return Promise.resolve(controllersByType[config.type])
-            } else return Promise.resolve(emptyController);
+                return controllersByType[config.type]
+            } else {
+                return emptyController
+            }
         });
     }
 
