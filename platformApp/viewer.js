@@ -103,7 +103,11 @@ module.exports = function () {
     });
 
     const controllersByType = {
-        'c1': Promise.resolve(controller()),
+        'c1': Promise.resolve({
+            pageReady: function ($w) {
+                $w("@button1").label = "HI";
+            }
+        }),
         'c2': Promise.resolve({
             pageReady: function ($w) {
                 $w("@button2").label = new Date().toLocaleString();
@@ -111,7 +115,7 @@ module.exports = function () {
         }),
         'c3': Promise.resolve({
             pageReady: $w => {
-                $w("@button3").label = 'data from c3'
+                $w("@button3").label = 'data from c3';
             }
         }),
         '14ffd3c2-de00-73d6-1831-64f837bb83f6': Promise.resolve({
