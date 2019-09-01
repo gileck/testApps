@@ -47,9 +47,8 @@ const exportFunctions = {
 
 function createControllers(controllerConfigs) {
     const array = controllerConfigs.map(controllerConfig => {
-        const compId = controllerConfig.config.compId;
         return {
-            exports: exportFunctions[controllerConfig.type],
+            exports: exportFunctions[controllerConfig.type] || {},
             pageReady: function () {}
         }
     });
